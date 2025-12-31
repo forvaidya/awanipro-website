@@ -9,15 +9,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Deployment environment'
-        required: true
-        default: 'production'
-        type: choice
-        options:
-          - production
-          - staging
+    # Manual trigger - allows deployment from GitHub UI
 
 jobs:
   build-and-deploy:
