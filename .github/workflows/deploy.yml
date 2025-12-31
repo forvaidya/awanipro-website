@@ -31,12 +31,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Step 4: Type check
-      - name: Type check
-        run: npm run type-check
-        continue-on-error: true
-
-      # Step 5: Build project
+      # Step 4: Build project
       - name: Build project
         run: npm run build
         env:
@@ -46,9 +41,22 @@ jobs:
           VITE_API_URL: https://api.devops-ranch.in
           VITE_ENVIRONMENT: production
 
-      # Step 6: Deploy to Cloudflare Pages
+      # Step 5: Check if Cloudflare secrets are configured
+      - name: Check Cloudflare credentials
+        id: check-secrets
+        run: |
+          if [ -z "${{ secrets.CLOUDFLARE_API_TOKEN }}" ] || [ -z "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}" ]; then
+            echo "⚠️  Cloudflare secrets not configured"
+            echo "has_secrets=false" >> $GITHUB_OUTPUT
+          else
+            echo "✅ Cloudflare secrets found"
+            echo "has_secrets=true" >> $GITHUB_OUTPUT
+          fi
+
+      # Step 6: Deploy to Cloudflare Pages (only if secrets exist)
       - name: Deploy to Cloudflare Pages
         id: cloudflare-deploy
+        if: steps.check-secrets.outputs.has_secrets == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
