@@ -1,17 +1,17 @@
 export function About() {
   return (
-    <section id="about" className="relative py-20 sm:py-32 bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden">
+    <section id="about" className="relative py-20 sm:py-32 bg-gray-50 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 right-0 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
-        <div className="absolute -bottom-1/4 -left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute -top-1/2 right-0 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-10 animate-pulse"></div>
+        <div className="absolute -bottom-1/4 -left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-10 animate-pulse" style={{animationDelay: '2s'}}></div>
       </div>
 
       <div className="container-max relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent mb-6">About AwaniPro</h2>
-            <div className="space-y-4 text-gray-300">
+            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent mb-6">About AwaniPro</h2>
+            <div className="space-y-4 text-gray-600 dark:text-gray-300">
               <p className="text-lg leading-relaxed">
                 AwaniPro Private Limited is a specialized DevOps and Cloud consulting company based in Bangalore, India, with over 20 years of hands-on expertise in enterprise infrastructure and cloud technologies.
               </p>
@@ -24,23 +24,23 @@ export function About() {
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-6">
-              <div className="group relative p-4 rounded-lg border border-slate-700 hover:border-indigo-500 transition-all duration-300 bg-slate-800/50">
+              <div className="group relative p-4 rounded-lg border border-gray-300 dark:border-slate-700 hover:border-indigo-500 transition-all duration-300 bg-white dark:bg-slate-800/50">
                 <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300 -z-10"></div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">20+</div>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Years Experience</p>
+                <div className="text-4xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:to-indigo-400 bg-clip-text text-transparent">20+</div>
+                <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">Years Experience</p>
               </div>
-              <div className="group relative p-4 rounded-lg border border-slate-700 hover:border-pink-500 transition-all duration-300 bg-slate-800/50">
+              <div className="group relative p-4 rounded-lg border border-gray-300 dark:border-slate-700 hover:border-pink-500 transition-all duration-300 bg-white dark:bg-slate-800/50">
                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-600 to-indigo-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300 -z-10"></div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent">100+</div>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Projects Delivered</p>
+                <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 via-indigo-600 to-cyan-600 dark:from-pink-400 dark:to-indigo-400 bg-clip-text text-transparent">100+</div>
+                <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">Projects Delivered</p>
               </div>
             </div>
           </div>
 
           <div className="group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-            <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Founder & Director</h3>
+            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 rounded-2xl blur opacity-20 dark:opacity-20 group-hover:opacity-40 transition duration-500"></div>
+            <div className="relative bg-white dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 border border-gray-200 dark:border-slate-700 rounded-2xl p-8 text-gray-900 dark:text-white">
+              <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-cyan-400 dark:to-indigo-400 bg-clip-text text-transparent">Founder & Director</h3>
               <div className="mb-6">
                 <div className="relative inline-block mb-4">
                   <img 
@@ -49,21 +49,21 @@ export function About() {
                     className="w-24 h-24 rounded-full object-cover border-4 border-indigo-500 group-hover:border-pink-500 transition-colors duration-300"
                   />
                 </div>
-                <h4 className="text-xl font-bold text-white">Mahesh Vaidya</h4>
-                <p className="text-cyan-400">Founder & Director</p>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">Mahesh Vaidya</h4>
+                <p className="text-cyan-600 dark:text-cyan-400">Founder & Director</p>
               </div>
-              <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
                 Serial entrepreneur with proven track record. 20+ years of hands-on DevOps and cloud infrastructure experience. Former Flipkart alumni with deep expertise in scaling cloud operations.
               </p>
 
-              <div className="mt-6 pt-6 border-t border-slate-700">
-                <p className="text-sm text-gray-400 mb-3">Connect with us:</p>
-                <p className="text-gray-300 mb-2">
-                  <a href="mailto:mahesh.vaidya@awanipro.com" className="hover:text-transparent hover:bg-gradient-to-r hover:from-cyan-400 hover:to-indigo-400 hover:bg-clip-text transition-all">
+              <div className="mt-6 pt-6 border-t border-gray-300 dark:border-slate-700">
+                <p className="text-sm text-gray-700 dark:text-gray-400 mb-3">Connect with us:</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-2">
+                  <a href="mailto:mahesh.vaidya@awanipro.com" className="text-indigo-600 dark:text-transparent dark:hover:bg-gradient-to-r dark:hover:from-cyan-400 dark:hover:to-indigo-400 dark:hover:bg-clip-text hover:text-indigo-700 transition-all">
                     mahesh.vaidya@awanipro.com
                   </a>
                 </p>
-                <p className="text-gray-300 mb-3">Bangalore, India</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-3">Bangalore, India</p>
                 <a 
                   href="https://www.linkedin.com/in/gitbangalore/" 
                   target="_blank" 

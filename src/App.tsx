@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
       <About />
