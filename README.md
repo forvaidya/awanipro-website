@@ -62,6 +62,12 @@ npm run preview
 
 ## 🌐 Deployment to Cloudflare Pages
 
+### Current Deployment Target
+- **Domain**: `beta.devops-ranch.in` (Cloudflare)
+- **Status**: Production-ready
+- **SSL**: Auto-provisioned by Cloudflare
+- **CDN**: Global Cloudflare CDN
+
 ### Step 1: Push to GitHub
 
 ```bash
@@ -80,38 +86,93 @@ git push -u origin main
 3. Select **Connect to Git** → Choose GitHub
 4. Authorize Cloudflare to access your GitHub repos
 5. Select `awanipro-website` repository
+6. **Authorize** Cloudflare GitHub App
 
 ### Step 3: Configure Build Settings
 
-In Cloudflare Pages:
-- **Framework preset**: (Leave blank - Vite is auto-detected)
-- **Build command**: `npm run build`
-- **Build output directory**: `dist`
-- **Root directory**: `/` (default)
-- **Environment variables**: (leave empty for now)
+In Cloudflare Pages → Project Settings → Build configuration:
 
-### Step 4: Deploy Custom Domain
+| Setting | Value |
+|---------|-------|
+| **Framework preset** | (Leave blank - Vite is auto-detected) |
+| **Build command** | `npm run build` |
+| **Build output directory** | `dist` |
+| **Root directory** | `/` (default) |
+| **Node version** | 18 (set in `package.json`) |
 
-1. In Cloudflare Pages project settings → **Custom domains**
-2. Click **Add custom domain** → Enter `awanipro.com`
-3. Update your domain registrar's nameservers to Cloudflare (or add CNAME):
-   - Nameservers: Available in Cloudflare Dashboard
-   - OR CNAME: Point to your Pages deployment
-4. Wait for DNS propagation (usually 5-30 minutes)
-5. Cloudflare auto-provisions free SSL certificate
+### Step 4: Deploy to Custom Domain (beta.devops-ranch.in)
 
-### Step 5: Optional - Environment Variables
+1. In Cloudflare Pages project → **Settings** → **Domains**
+2. Click **Add custom domain**
+3. Enter domain: `beta.devops-ranch.in`
+4. Choose: **Use Cloudflare nameservers** (recommended) OR **Add CNAME record**
 
-For future features (contact form, analytics, etc.), add to Cloudflare Pages Settings:
+**Option A: Cloudflare Nameservers (Easiest)**
+- Point your domain registrar's nameservers to Cloudflare
+- Cloudflare provides 2 nameserver addresses
+- Update at your domain registrar (GoDaddy, Namecheap, etc.)
+- Wait 5-30 minutes for DNS propagation
 
-```env
-VITE_API_URL=https://api.example.com
-VITE_RECAPTCHA_KEY=your_key_here
+**Option B: CNAME Record**
+- In your domain registrar's DNS settings
+- Add CNAME record: `beta.devops-ranch.in` → `awanipro-website.<pages-hash>.pages.dev`
+- Hash provided by Cloudflare Pages
+
+5. **Verify** once DNS propagates
+6. Cloudflare **auto-provisions SSL certificate** (free)
+
+### Step 5: Environment Variables for CF
+
+Add to Cloudflare Pages → **Settings** → **Environment variables**:
+
 ```
+# Production (auto-deployed)
+VITE_API_URL=https://api.devops-ranch.in
+VITE_DOMAIN=beta.devops-ranch.in
+NODE_ENV=production
+```
+
+### Step 6: Verify Deployment
+
+After DNS propagates (5-30 mins):
+
+1. Visit `https://beta.devops-ranch.in` ✓
+2. Check Cloudflare Analytics: Dashboard → `beta.devops-ranch.in` → **Analytics**
+3. Verify SSL: 🔒 Green lock icon in browser
+4. Test all pages: Home, About, Services, Blog, Contact
 
 ### Automatic Deployments
 
-Every `git push` to `main` branch automatically triggers new deployment. View deployment history in Cloudflare Dashboard → Pages project → **Deployments**.
+**Every push to `main` branch** automatically triggers deployment:
+
+```bash
+git add .
+git commit -m "Update blog posts"
+git push origin main
+# → Cloudflare Pages auto-builds and deploys to beta.devops-ranch.in
+```
+
+Monitor deployments:
+1. Cloudflare Dashboard → Your project
+2. **Deployments** tab
+3. View build logs, rollback if needed
+
+### Environment Variables Configuration
+
+For different environments, create Cloudflare environment variables:
+
+**Production** (`beta.devops-ranch.in`):
+```env
+VITE_ENVIRONMENT=production
+VITE_API_URL=https://api.devops-ranch.in
+VITE_CONTACT_EMAIL=hello@awanipro.com
+```
+
+(Future) **Staging**:
+```env
+VITE_ENVIRONMENT=staging
+VITE_API_URL=https://staging-api.devops-ranch.in
+```
 
 ## 📝 File Structure
 
@@ -155,7 +216,7 @@ colors: {
 Edit `src/components/About.tsx`:
 - Founder name: "Mahesh Vaidya"
 - Company description
-- Contact email: hello@awanipro.com
+- Contact email: mahesh.vaidya@awanipro.com
 - Location: Bangalore, India
 
 Edit `src/components/Contact.tsx`:
