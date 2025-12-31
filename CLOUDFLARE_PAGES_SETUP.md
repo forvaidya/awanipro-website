@@ -8,23 +8,21 @@ Your Cloudflare Pages build is failing because of an incorrect **Deploy command*
 
 Go to: **Cloudflare Dashboard** → **Pages** → **awanipro-website** → **Settings** → **Build configuration**
 
-Set these fields:
+Set these fields EXACTLY:
 
-| Field | Value | Status |
-|-------|-------|--------|
-| **Build command** | `npm run build` | ✅ Correct |
-| **Build output directory** | `dist` | ✅ Correct |
-| **Deploy command** | **LEAVE EMPTY** | ❌ Remove the wrangler command |
-| **Node.js version** | 18.20.0+ | ✅ Default |
+| Field | Value |
+|-------|-------|
+| **Build command** | `npm run build` |
+| **Build output directory** | `dist` |
+| **Deploy command** | `npx wrangler pages deploy ./dist --project-name awanipro-website` |
+| **Node.js version** | 18.20.0+ |
 
-## ❌ What NOT to Do
+## Important: Build Output Directory
 
-DO NOT use these deploy commands:
-- `npx wrangler deploy` ❌
-- `npx wrangler pages deploy` ❌
-- `wrangler deploy` ❌
-
-Cloudflare Pages handles deployment automatically after building!
+**Make sure it's set to: `dist`**
+- NOT `/` (root folder)
+- NOT `./dist`
+- Just: `dist`
 
 ## 🚀 How It Works
 
