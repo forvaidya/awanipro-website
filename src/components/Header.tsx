@@ -18,10 +18,11 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-sm">
       <nav className="container-max py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
-            AP
-          </div>
-          <span className="text-xl font-bold text-gray-900 dark:text-white">AwaniPro</span>
+          <img 
+            src="/media/awanipro-final-logo.svg" 
+            alt="AwaniPro Logo" 
+            className="w-12 h-12 object-contain"
+          />
         </div>
 
         {/* Desktop Navigation */}
