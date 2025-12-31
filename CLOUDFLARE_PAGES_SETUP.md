@@ -14,15 +14,14 @@ Set these fields EXACTLY:
 |-------|-------|
 | **Build command** | `npm run build` |
 | **Build output directory** | `dist` |
-| **Deploy command** | `npx wrangler pages deploy ./dist --project-name awanipro-website` |
-| **Node.js version** | 18.20.0+ |
+| **Deploy command** | **(LEAVE EMPTY - delete any content)** |
+| **Node.js version** | 18.20.0+ (default) |
 
-## Important: Build Output Directory
+## ✨ Important Notes
 
-**Make sure it's set to: `dist`**
-- NOT `/` (root folder)
-- NOT `./dist`
-- Just: `dist`
+- **Deploy command:** Delete/clear this field completely
+- **Build output directory:** Must be `dist` (NOT `/` or `./dist`)
+- Cloudflare Pages will automatically serve files from `dist` folder
 
 ## 🚀 How It Works
 
