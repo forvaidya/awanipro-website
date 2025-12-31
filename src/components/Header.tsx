@@ -21,7 +21,7 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
           <img 
             src="/media/awanipro-final-logo.svg" 
             alt="AwaniPro Logo" 
-            className="w-12 h-12 object-contain"
+            className="h-12 w-auto object-contain"
           />
         </div>
 
