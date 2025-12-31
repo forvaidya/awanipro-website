@@ -19,7 +19,7 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
       <nav className="container-max py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img 
-            src="/media/awanipro-final-logo.svg" 
+            src={`${import.meta.env.BASE_URL}media/awanipro-final-logo.svg`}
             alt="AwaniPro Logo" 
             className="h-12 w-auto object-contain dark:invert"
           />
