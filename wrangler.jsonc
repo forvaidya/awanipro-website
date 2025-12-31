@@ -1,16 +1,4 @@
 {
   "name": "awanipro-website",
-  "pages_build_output_dir": "dist",
-  "compatibility_date": "2025-12-31",
-  "env": {
-    "production": {
-      "name": "awanipro-website-prod",
-      "routes": [
-        {
-          "pattern": "beta.devops-ranch.in",
-          "zone_name": "devops-ranch.in"
-        }
-      ]
-    }
-  }
+  "compatibility_date": "2025-12-31"
 }
