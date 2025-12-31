@@ -61,7 +61,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=awanipro-website
+          command: pages deploy ./dist --project-name awanipro-website
 
       # Step 7: Add CNAME to _routes.json (optional - Cloudflare handles this)
       - name: Generate deployment summary
