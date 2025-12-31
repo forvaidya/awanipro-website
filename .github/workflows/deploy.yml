@@ -1,6 +1,6 @@
 name: Deploy to Cloudflare Pages
 
-# Trigger on push to main branch
+# Trigger on push to main branch, manual dispatch, or pull requests
 on:
   push:
     branches:
@@ -8,6 +8,16 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
 
 jobs:
   build-and-deploy:
