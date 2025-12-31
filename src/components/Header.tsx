@@ -33,6 +33,9 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
           <button onClick={() => scrollToSection('services')} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
             Services
           </button>
+          <button onClick={() => scrollToSection('blog')} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+            Blog
+          </button>
           <button onClick={() => scrollToSection('contact')} className="btn-primary">
             Contact Us
           </button>
@@ -70,6 +73,9 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
             </button>
             <button onClick={() => scrollToSection('services')} className="text-left text-gray-600 dark:text-gray-300 hover:text-blue-600 py-2">
               Services
+            </button>
+            <button onClick={() => scrollToSection('blog')} className="text-left text-gray-600 dark:text-gray-300 hover:text-blue-600 py-2">
+              Blog
             </button>
             <button onClick={() => scrollToSection('contact')} className="btn-primary w-full text-center">
               Contact Us

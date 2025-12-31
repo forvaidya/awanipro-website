@@ -37,8 +37,8 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <p className="text-gray-400 text-sm mb-2">
-              <a href="mailto:hello@awanipro.com" className="hover:text-white transition">
-                hello@awanipro.com
+              <a href="mailto:mahesh.vaidya@awanipro.com" className="hover:text-white transition">
+                mahesh.vaidya@awanipro.com
               </a>
             </p>
             <p className="text-gray-400 text-sm">

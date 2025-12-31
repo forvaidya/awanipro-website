@@ -73,8 +73,8 @@ export function Contact() {
             <div className="space-y-8">
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2">Email</h3>
-                <a href="mailto:hello@awanipro.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-                  hello@awanipro.com
+                <a href="mailto:mahesh.vaidya@awanipro.com" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  mahesh.vaidya@awanipro.com
                 </a>
               </div>
               <div>
