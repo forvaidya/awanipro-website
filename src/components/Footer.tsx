@@ -1,3 +1,5 @@
+import { config } from '../config';
+
 export function Footer() {
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12">
@@ -53,7 +55,7 @@ export function Footer() {
               <li>
                 CIN:{' '}
                 <a
-                  href="/registration-certificate.pdf"
+                  href={config.assets.registrationCertificate}
                   download
                   className="text-blue-400 hover:text-blue-300 transition"
                 >
@@ -63,7 +65,7 @@ export function Footer() {
               <li>
                 GSTIN:{' '}
                 <a
-                  href="/gst-certificate.pdf"
+                  href={config.assets.gstCertificate}
                   download
                   className="text-blue-400 hover:text-blue-300 transition"
                 >

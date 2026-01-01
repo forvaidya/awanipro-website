@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { config } from '../config';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ export function Contact() {
     e.preventDefault();
     
     try {
-      const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
+      const accessKey = config.web3forms.key;
       
       if (!accessKey) {
         console.error('Web3Forms access key is not configured');
