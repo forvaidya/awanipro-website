@@ -52,9 +52,9 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 CIN:{' '}
-                <a 
-                  href="registration-certificate.pdf" 
-                  download 
+                <a
+                  href="/registration-certificate.pdf"
+                  download
                   className="text-blue-400 hover:text-blue-300 transition"
                 >
                   U63999KA2024PTC187047
@@ -62,9 +62,9 @@ export function Footer() {
               </li>
               <li>
                 GSTIN:{' '}
-                <a 
-                  href="gst-certificate.pdf" 
-                  download 
+                <a
+                  href="/gst-certificate.pdf"
+                  download
                   className="text-blue-400 hover:text-blue-300 transition"
                 >
                   29ABACA4737C1ZW
