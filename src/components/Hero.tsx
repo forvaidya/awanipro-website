@@ -97,27 +97,138 @@ export function Hero() {
           {/* Hero visual */}
           <div className="relative lg:block hidden">
             <div className="relative">
-              {/* Main visual placeholder */}
-              <div className="w-full h-96 bg-gradient-to-br from-indigo-100 via-cyan-50 to-pink-100 dark:from-indigo-900/20 dark:via-cyan-900/20 dark:to-pink-900/20 rounded-2xl border border-gray-200 dark:border-gray-700 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center">
-                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 font-medium">Professional Hero Image</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">Infrastructure Visualization</p>
-                </div>
+              {/* Professional DevOps Infrastructure Illustration */}
+              <div className="w-full h-96 relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 via-orange-50 to-amber-50 dark:from-slate-800 dark:via-orange-900/10 dark:to-amber-900/10">
+                <svg
+                  viewBox="0 0 400 300"
+                  className="w-full h-full"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Background pattern */}
+                  <defs>
+                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.1" className="text-orange-300 dark:text-orange-700"/>
+                    </pattern>
+                    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3B82F6" />
+                      <stop offset="50%" stopColor="#F59E0B" />
+                      <stop offset="100%" stopColor="#10B981" />
+                    </linearGradient>
+                    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#6366F1" />
+                      <stop offset="50%" stopColor="#F97316" />
+                      <stop offset="100%" stopColor="#8B5CF6" />
+                    </linearGradient>
+                  </defs>
+
+                  <rect width="400" height="300" fill="url(#grid)" />
+
+                  {/* Cloud Infrastructure */}
+                  <g transform="translate(50, 40)">
+                    {/* Main cloud */}
+                    <ellipse cx="150" cy="80" rx="60" ry="25" fill="url(#cloudGradient)" opacity="0.8" />
+                    <ellipse cx="130" cy="75" rx="45" ry="20" fill="url(#cloudGradient)" opacity="0.9" />
+                    <ellipse cx="170" cy="75" rx="45" ry="20" fill="url(#cloudGradient)" opacity="0.9" />
+
+                    {/* Cloud nodes */}
+                    <circle cx="120" cy="70" r="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" />
+                    <circle cx="140" cy="65" r="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" />
+                    <circle cx="160" cy="70" r="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" />
+                    <circle cx="180" cy="65" r="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" />
+                  </g>
+
+                  {/* Server rack */}
+                  <g transform="translate(250, 120)">
+                    {/* Server rack outline */}
+                    <rect x="0" y="0" width="80" height="120" rx="4" fill="none" stroke="#6B7280" strokeWidth="2" className="dark:stroke-gray-600" />
+
+                    {/* Server units */}
+                    <rect x="5" y="10" width="70" height="15" rx="2" fill="url(#serverGradient)" opacity="0.7" />
+                    <rect x="5" y="30" width="70" height="15" rx="2" fill="url(#serverGradient)" opacity="0.8" />
+                    <rect x="5" y="50" width="70" height="15" rx="2" fill="url(#serverGradient)" opacity="0.6" />
+                    <rect x="5" y="70" width="70" height="15" rx="2" fill="url(#serverGradient)" opacity="0.9" />
+
+                    {/* Server indicators */}
+                    <circle cx="15" cy="17.5" r="2" fill="#10B981" />
+                    <circle cx="25" cy="17.5" r="2" fill="#F59E0B" />
+                    <circle cx="35" cy="17.5" r="2" fill="#EF4444" />
+
+                    <circle cx="15" cy="37.5" r="2" fill="#10B981" />
+                    <circle cx="25" cy="37.5" r="2" fill="#F59E0B" />
+                    <circle cx="35" cy="37.5" r="2" fill="#10B981" />
+                  </g>
+
+                  {/* Connection lines */}
+                  <g stroke="#F97316" strokeWidth="2" fill="none" opacity="0.6">
+                    <path d="M180 90 Q220 100 250 130" strokeDasharray="5,5" />
+                    <path d="M160 85 Q200 95 250 135" strokeDasharray="5,5" />
+                    <path d="M200 95 Q230 110 250 140" strokeDasharray="5,5" />
+                  </g>
+
+                  {/* Kubernetes pods */}
+                  <g transform="translate(40, 180)">
+                    <circle cx="50" cy="50" r="20" fill="#3B82F6" opacity="0.8" />
+                    <circle cx="50" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                    <text x="50" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="12" fontWeight="bold">K8s</text>
+
+                    <circle cx="120" cy="50" r="20" fill="#10B981" opacity="0.8" />
+                    <circle cx="120" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                    <text x="120" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">POD</text>
+
+                    <circle cx="190" cy="50" r="20" fill="#8B5CF6" opacity="0.8" />
+                    <circle cx="190" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                    <text x="190" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">SVC</text>
+                  </g>
+
+                  {/* CI/CD Pipeline */}
+                  <g transform="translate(50, 240)">
+                    <rect x="0" y="0" width="30" height="20" rx="3" fill="#6366F1" />
+                    <text x="15" y="12" textAnchor="middle" fill="#FFFFFF" fontSize="8">Code</text>
+
+                    <rect x="40" y="0" width="30" height="20" rx="3" fill="#F59E0B" />
+                    <text x="55" y="12" textAnchor="middle" fill="#FFFFFF" fontSize="8">Build</text>
+
+                    <rect x="80" y="0" width="30" height="20" rx="3" fill="#10B981" />
+                    <text x="95" y="12" textAnchor="middle" fill="#FFFFFF" fontSize="8">Test</text>
+
+                    <rect x="120" y="0" width="30" height="20" rx="3" fill="#EF4444" />
+                    <text x="135" y="12" textAnchor="middle" fill="#FFFFFF" fontSize="8">Deploy</text>
+
+                    {/* Pipeline flow */}
+                    <path d="M30 10 L40 10" stroke="#FFFFFF" strokeWidth="2" markerEnd="url(#arrow)" />
+                    <path d="M70 10 L80 10" stroke="#FFFFFF" strokeWidth="2" markerEnd="url(#arrow)" />
+                    <path d="M110 10 L120 10" stroke="#FFFFFF" strokeWidth="2" markerEnd="url(#arrow)" />
+
+                    <defs>
+                      <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#FFFFFF" />
+                      </marker>
+                    </defs>
+                  </g>
+
+                  {/* Floating monitoring elements */}
+                  <g transform="translate(320, 50)">
+                    <circle cx="0" cy="0" r="25" fill="#F97316" opacity="0.7" />
+                    <path d="M-8,-8 L8,8 M8,-8 L-8,8" stroke="#FFFFFF" strokeWidth="2" />
+                    <circle cx="0" cy="0" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                  </g>
+
+                  <g transform="translate(320, 120)">
+                    <rect x="-15" y="-15" width="30" height="30" rx="4" fill="#10B981" opacity="0.7" />
+                    <path d="M-8,0 L0,8 L8,0 Z" fill="#FFFFFF" />
+                    <text x="0" y="20" textAnchor="middle" fill="#FFFFFF" fontSize="8">UP</text>
+                  </g>
+                </svg>
               </div>
 
               {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-lg shadow-lg flex items-center justify-center animate-bounce">
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-orange-400 to-amber-500 rounded-lg shadow-lg flex items-center justify-center animate-bounce">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
 
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg shadow-lg flex items-center justify-center animate-pulse">
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-indigo-400 to-cyan-500 rounded-lg shadow-lg flex items-center justify-center animate-pulse">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
