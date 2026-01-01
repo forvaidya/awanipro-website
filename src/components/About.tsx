@@ -31,8 +31,8 @@ export function About() {
               </div>
               <div className="group relative p-4 rounded-lg border border-gray-300 dark:border-slate-700 hover:border-pink-500 transition-all duration-300 bg-white dark:bg-slate-800/50">
                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-600 to-indigo-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300 -z-10"></div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 via-indigo-600 to-cyan-600 dark:from-pink-400 dark:to-indigo-400 bg-clip-text text-transparent">100+</div>
-                <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">Projects Delivered</p>
+                <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 via-indigo-600 to-cyan-600 dark:from-pink-400 dark:to-indigo-400 bg-clip-text text-transparent">1:1</div>
+                <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">Personal Service</p>
               </div>
             </div>
           </div>

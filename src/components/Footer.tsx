@@ -3,7 +3,7 @@ import { config } from '../config';
 export function Footer() {
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12">
-      <div className="container-max">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           {/* Company Info */}
           <div>
@@ -53,34 +53,64 @@ export function Footer() {
             <h4 className="font-bold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                CIN:{' '}
                 <a
                   href={config.assets.registrationCertificate}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition"
                 >
-                  U63999KA2024PTC187047
+                  Registration Certificate
                 </a>
               </li>
               <li>
-                GSTIN:{' '}
                 <a
                   href={config.assets.gstCertificate}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition"
                 >
-                  29ABACA4737C1ZW
+                  GST Certificate
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} AwaniPro Private Limited. All rights reserved.</p>
-          <p className="mt-2">Built with Hono + Vite for Cloudflare Pages</p>
+        {/* Bottom Section - Always horizontal */}
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-row flex-wrap justify-between items-center gap-4">
+            {/* Copyright and Tech Info */}
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-gray-400 text-sm">
+              <p>&copy; {new Date().getFullYear()} AwaniPro Private Limited. All rights reserved.</p>
+              <p>Built with Hono + Vite for Cloudflare Pages</p>
+            </div>
+
+            {/* Legal IDs - Always horizontal, no stacking */}
+            <div className="flex flex-row items-center gap-6 text-gray-400 text-sm">
+              <div className="flex items-center space-x-2">
+                <span className="font-medium">CIN:</span>
+                <a
+                  href={config.assets.registrationCertificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition whitespace-nowrap"
+                >
+                  U63999KA2024PTC187047
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="font-medium">GSTIN:</span>
+                <a
+                  href={config.assets.gstCertificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition whitespace-nowrap"
+                >
+                  29ABACA4737C1ZW
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -41,7 +41,7 @@ export function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-indigo-800 to-cyan-800 dark:from-white dark:via-cyan-100 dark:to-indigo-100 bg-clip-text text-transparent mb-6 leading-tight">
               Transform Your Infrastructure with
               <span className="block bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent">
-                Enterprise DevOps
+                Expert DevOps
               </span>
             </h1>
 
@@ -51,11 +51,7 @@ export function Hero() {
             </p>
 
             {/* Key metrics */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent">100+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Projects Delivered</div>
-              </div>
+            <div className="grid grid-cols-2 gap-6 mb-8">
               <div className="text-center">
                 <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-pink-600 bg-clip-text text-transparent">20+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
@@ -196,42 +192,4 @@ export function Hero() {
                   <g transform="translate(260, 180)">
                     <rect x="0" y="0" width="60" height="35" rx="8" fill="#FFFFFF" stroke="#10B981" strokeWidth="2" opacity="0.9" />
                     <text x="30" y="15" textAnchor="middle" fill="#10B981" fontSize="12" fontWeight="bold">99.9%</text>
-                    <text x="30" y="28" textAnchor="middle" fill="#666666" fontSize="8">Uptime SLA</text>
-                  </g>
-
-                  {/* Floating achievement icons */}
-                  <g transform="translate(320, 40)">
-                    <circle cx="0" cy="0" r="18" fill="#F97316" opacity="0.8" />
-                    <path d="M-8,0 L-3,5 L8,0 L-3,-5 Z" fill="#FFFFFF" />
-                  </g>
-
-                  <g transform="translate(60, 120)">
-                    <circle cx="0" cy="0" r="18" fill="#10B981" opacity="0.8" />
-                    <path d="M-6,-6 L6,6 M6,-6 L-6,6" stroke="#FFFFFF" strokeWidth="2" />
-                    <circle cx="0" cy="0" r="8" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-                  </g>
-
-                  {/* Subtle glow effect */}
-                  <circle cx="200" cy="150" r="80" fill="url(#centerGlow)" />
-                </svg>
-              </div>
-
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-orange-400 to-amber-500 rounded-lg shadow-lg flex items-center justify-center animate-bounce">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-indigo-400 to-cyan-500 rounded-lg shadow-lg flex items-center justify-center animate-pulse">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+                    <text x="30" y="28" textAnchor="middle
