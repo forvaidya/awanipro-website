@@ -1,9 +1,12 @@
 name = "awanipro-website"
 compatibility_date = "2025-12-31"
 
+# Cloudflare Pages configuration
+pages_build_output_dir = "dist"
+
 [env.production.vars]
 # Base URL for assets (leave empty for root-relative paths)
-# VITE_BASE_URL = "https://your-domain.com"
+# VITE_BASE_URL = "https://beta.devops-ranch.in"
 
 [vars]
 # Web3Forms API Key
