@@ -3,6 +3,21 @@ export function Hero() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Random tech infrastructure image selection
+  const techImages = [
+    '/media/tech-infrastructure-1.svg',
+    '/media/tech-infrastructure-2.svg', 
+    '/media/tech-infrastructure-3.svg'
+  ];
+  
+  const [currentImage, setCurrentImage] = React.useState('');
+  
+  React.useEffect(() => {
+    // Pick a random image on component mount
+    const randomIndex = Math.floor(Math.random() * techImages.length);
+    setCurrentImage(techImages[randomIndex]);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-900 py-20 sm:py-32">
       {/* Animated background elements */}
@@ -90,16 +105,18 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Hero visual - simplified to avoid build issues */}
+          {/* Hero visual - Random clean technology infrastructure */}
           <div className="relative lg:block hidden">
             <div className="relative">
-              <div className="w-full h-96 relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 via-orange-50 to-amber-50 dark:from-slate-800 dark:via-orange-900/10 dark:to-amber-900/10">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl font-bold bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent mb-4">DevOps</div>
-                    <div className="text-xl text-gray-600 dark:text-gray-300">Expert Solutions</div>
-                  </div>
-                </div>
+              <div className="w-full h-96 relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-800 dark:via-blue-900/10 dark:to-indigo-900/10">
+                {currentImage && (
+                  <img
+                    src={currentImage}
+                    alt="Technology Infrastructure"
+                    className="w-full h-full object-cover"
+                    style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))' }}
+                  />
+                )}
               </div>
             </div>
           </div>
