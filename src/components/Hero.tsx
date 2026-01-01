@@ -5,19 +5,22 @@ export function Hero() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Random tech infrastructure image selection
+  // Technology infrastructure images for cycling
   const techImages = [
     '/media/tech-infrastructure-1.svg',
     '/media/tech-infrastructure-2.svg', 
     '/media/tech-infrastructure-3.svg'
   ];
   
-  const [currentImage, setCurrentImage] = useState('');
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   useEffect(() => {
-    // Pick a random image on component mount
-    const randomIndex = Math.floor(Math.random() * techImages.length);
-    setCurrentImage(techImages[randomIndex]);
+    // Cycle through images every 3 minutes (180 seconds)
+    const interval = setInterval(() => {
+      setCurrentImageIndex(prevIndex => (prevIndex + 1) % techImages.length);
+    }, 180000); // 3 minutes = 180000ms
+    
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -107,18 +110,35 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Hero visual - Random clean technology infrastructure */}
+          {/* Hero visual - Smooth cycling technology infrastructure */}
           <div className="relative lg:block hidden">
             <div className="relative">
               <div className="w-full h-96 relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-800 dark:via-blue-900/10 dark:to-indigo-900/10">
-                {currentImage && (
+                {techImages.map((image, index) => (
                   <img
-                    src={currentImage}
-                    alt="Technology Infrastructure"
-                    className="w-full h-full object-cover"
+                    key={index}
+                    src={image}
+                    alt={`Technology Infrastructure ${index + 1}`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))' }}
                   />
-                )}
+                ))}
+              </div>
+              
+              {/* Image indicators */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {techImages.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                      index === currentImageIndex 
+                        ? 'bg-indigo-600 dark:bg-cyan-400' 
+                        : 'bg-gray-300 dark:bg-gray-600'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
