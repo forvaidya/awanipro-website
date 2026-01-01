@@ -4,10 +4,11 @@ compatibility_date = "2025-12-31"
 # Cloudflare Pages configuration
 pages_build_output_dir = "dist"
 
-[env.production.vars]
-# Base URL for assets (leave empty for root-relative paths)
-# VITE_BASE_URL = "https://beta.devops-ranch.in"
-
+# Environment variables for all environments
 [vars]
 # Web3Forms API Key
 VITE_WEB3FORMS_KEY = "6be5f6a6-c4ae-40bf-bc5d-38778cbdd171"
+
+# Production-specific variables (uncomment when needed)
+# [env.production.vars]
+# VITE_BASE_URL = "https://beta.devops-ranch.in"
