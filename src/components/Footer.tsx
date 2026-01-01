@@ -56,7 +56,8 @@ export function Footer() {
                 CIN:{' '}
                 <a
                   href={config.assets.registrationCertificate}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition"
                 >
                   U63999KA2024PTC187047
@@ -66,7 +67,8 @@ export function Footer() {
                 GSTIN:{' '}
                 <a
                   href={config.assets.gstCertificate}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition"
                 >
                   29ABACA4737C1ZW
