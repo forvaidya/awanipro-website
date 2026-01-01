@@ -90,106 +90,21 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Hero visual */}
+          {/* Hero visual - simplified to avoid build issues */}
           <div className="relative lg:block hidden">
             <div className="relative">
-              {/* Professional Growth & Innovation Illustration */}
               <div className="w-full h-96 relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 via-orange-50 to-amber-50 dark:from-slate-800 dark:via-orange-900/10 dark:to-amber-900/10">
-                <svg
-                  viewBox="0 0 400 300"
-                  className="w-full h-full"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Background with subtle pattern */}
-                  <defs>
-                    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
-                      <circle cx="15" cy="15" r="1.5" fill="#F97316" opacity="0.2" className="dark:opacity-0.4" />
-                    </pattern>
-                    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#F97316" stopOpacity="0.1" />
-                      <stop offset="100%" stopColor="#F97316" stopOpacity="0" />
-                    </radialGradient>
-                    <linearGradient id="growthGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#6366F1" />
-                      <stop offset="50%" stopColor="#F59E0B" />
-                      <stop offset="100%" stopColor="#10B981" />
-                    </linearGradient>
-                  </defs>
-
-                  <rect width="400" height="300" fill="url(#dots)" />
-
-                  {/* Central growth visualization */}
-                  <g transform="translate(200, 150)">
-                    {/* Main upward arrow */}
-                    <path d="M-8,40 L-8,-20 L-16,-12 L0,-40 L16,-12 L8,-20 L8,40 Z"
-                          fill="url(#growthGradient)"
-                          opacity="0.8" />
-
-                    {/* Growth bars */}
-                    <rect x="-60" y="30" width="20" height="40" rx="2" fill="#3B82F6" opacity="0.7" />
-                    <rect x="-30" y="10" width="20" height="60" rx="2" fill="#F59E0B" opacity="0.8" />
-                    <rect x="10" y="-10" width="20" height="80" rx="2" fill="#10B981" opacity="0.9" />
-                    <rect x="40" y="-20" width="20" height="90" rx="2" fill="#8B5CF6" opacity="0.8" />
-
-                    {/* Connecting lines */}
-                    <path d="M-50,30 L-50,-20 Q-50,-35 0,-40"
-                          stroke="#F97316"
-                          strokeWidth="2"
-                          fill="none"
-                          opacity="0.6"
-                          strokeDasharray="3,3" />
-                  </g>
-
-                  {/* Innovation rings */}
-                  <g transform="translate(120, 80)">
-                    <circle cx="0" cy="0" r="45" fill="none" stroke="#F97316" strokeWidth="2" opacity="0.3" />
-                    <circle cx="0" cy="0" r="35" fill="none" stroke="#F59E0B" strokeWidth="2" opacity="0.4" />
-                    <circle cx="0" cy="0" r="25" fill="none" stroke="#10B981" strokeWidth="2" opacity="0.5" />
-
-                    {/* Central innovation hub */}
-                    <circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#F97316" strokeWidth="3" />
-                    <path d="M-6,-6 L6,6 M6,-6 L-6,6" stroke="#F97316" strokeWidth="2" />
-                  </g>
-
-                  {/* Network connections */}
-                  <g stroke="#6366F1" strokeWidth="1.5" fill="none" opacity="0.7">
-                    <path d="M120,80 Q200,120 200,150" strokeDasharray="4,4" />
-                    <path d="M120,80 Q160,40 280,60" strokeDasharray="4,4" />
-                    <path d="M280,60 Q320,80 350,100" strokeDasharray="4,4" />
-                    <path d="M200,150 Q250,170 320,160" strokeDasharray="4,4" />
-                  </g>
-
-                  {/* Service nodes */}
-                  <g>
-                    {/* Cloud node */}
-                    <circle cx="50" cy="50" r="20" fill="#3B82F6" opacity="0.8" />
-                    <circle cx="50" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-                    <text x="50" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">Cloud</text>
-
-                    {/* DevOps node */}
-                    <circle cx="350" cy="50" r="20" fill="#F59E0B" opacity="0.8" />
-                    <circle cx="350" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-                    <text x="350" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">DevOps</text>
-
-                    {/* Security node */}
-                    <circle cx="50" cy="250" r="20" fill="#10B981" opacity="0.8" />
-                    <circle cx="50" cy="250" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-                    <text x="50" y="255" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">Security</text>
-
-                    {/* Analytics node */}
-                    <circle cx="350" cy="250" r="20" fill="#8B5CF6" opacity="0.8" />
-                    <circle cx="350" cy="250" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-                    <text x="350" y="255" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">Analytics</text>
-                  </g>
-
-                  {/* Success metrics */}
-                  <g transform="translate(80, 180)">
-                    <rect x="0" y="0" width="60" height="35" rx="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" opacity="0.9" />
-                    <text x="30" y="15" textAnchor="middle" fill="#F97316" fontSize="12" fontWeight="bold">85%</text>
-                    <text x="30" y="28" textAnchor="middle" fill="#666666" fontSize="8">Faster Deploy</text>
-                  </g>
-
-                  <g transform="translate(260, 180)">
-                    <rect x="0" y="0" width="60" height="35" rx="8" fill="#FFFFFF" stroke="#10B981" strokeWidth="2" opacity="0.9" />
-                    <text x="30" y="15" textAnchor="middle" fill="#10B981" fontSize="12" fontWeight="bold">99.9%</text>
-                    <text x="30" y="28" textAnchor="middle
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl font-bold bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent mb-4">DevOps</div>
+                    <div className="text-xl text-gray-600 dark:text-gray-300">Expert Solutions</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
