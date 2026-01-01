@@ -97,140 +97,135 @@ export function Hero() {
           {/* Hero visual */}
           <div className="relative lg:block hidden">
             <div className="relative">
-              {/* Professional DevOps Infrastructure Illustration */}
+              {/* Professional Growth & Innovation Illustration */}
               <div className="w-full h-96 relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 via-orange-50 to-amber-50 dark:from-slate-800 dark:via-orange-900/10 dark:to-amber-900/10">
                 <svg
                   viewBox="0 0 400 300"
                   className="w-full h-full"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  {/* Background pattern */}
+                  {/* Background with subtle pattern */}
                   <defs>
-                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.1" className="text-orange-300 dark:text-orange-700"/>
+                    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+                      <circle cx="15" cy="15" r="1.5" fill="#F97316" opacity="0.2" className="dark:opacity-0.4" />
                     </pattern>
-                    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3B82F6" />
+                    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="#F97316" stopOpacity="0.1" />
+                      <stop offset="100%" stopColor="#F97316" stopOpacity="0" />
+                    </radialGradient>
+                    <linearGradient id="growthGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#6366F1" />
                       <stop offset="50%" stopColor="#F59E0B" />
                       <stop offset="100%" stopColor="#10B981" />
                     </linearGradient>
-                    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#6366F1" />
-                      <stop offset="50%" stopColor="#F97316" />
-                      <stop offset="100%" stopColor="#8B5CF6" />
-                    </linearGradient>
                   </defs>
 
-                  <rect width="400" height="300" fill="url(#grid)" />
+                  <rect width="400" height="300" fill="url(#dots)" />
 
-                  {/* Cloud Infrastructure */}
-                  <g transform="translate(50, 40)">
-                    {/* Main cloud */}
-                    <ellipse cx="150" cy="80" rx="60" ry="25" fill="url(#cloudGradient)" opacity="0.8" />
-                    <ellipse cx="130" cy="75" rx="45" ry="20" fill="url(#cloudGradient)" opacity="0.9" />
-                    <ellipse cx="170" cy="75" rx="45" ry="20" fill="url(#cloudGradient)" opacity="0.9" />
+                  {/* Central growth visualization */}
+                  <g transform="translate(200, 150)">
+                    {/* Main upward arrow */}
+                    <path d="M-8,40 L-8,-20 L-16,-12 L0,-40 L16,-12 L8,-20 L8,40 Z"
+                          fill="url(#growthGradient)"
+                          opacity="0.8" />
 
-                    {/* Cloud nodes */}
-                    <circle cx="120" cy="70" r="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" />
-                    <circle cx="140" cy="65" r="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" />
-                    <circle cx="160" cy="70" r="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" />
-                    <circle cx="180" cy="65" r="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" />
+                    {/* Growth bars */}
+                    <rect x="-60" y="30" width="20" height="40" rx="2" fill="#3B82F6" opacity="0.7" />
+                    <rect x="-30" y="10" width="20" height="60" rx="2" fill="#F59E0B" opacity="0.8" />
+                    <rect x="10" y="-10" width="20" height="80" rx="2" fill="#10B981" opacity="0.9" />
+                    <rect x="40" y="-20" width="20" height="90" rx="2" fill="#8B5CF6" opacity="0.8" />
+
+                    {/* Connecting lines */}
+                    <path d="M-50,30 L-50,-20 Q-50,-35 0,-40"
+                          stroke="#F97316"
+                          strokeWidth="2"
+                          fill="none"
+                          opacity="0.6"
+                          strokeDasharray="3,3" />
                   </g>
 
-                  {/* Server rack */}
-                  <g transform="translate(250, 120)">
-                    {/* Server rack outline */}
-                    <rect x="0" y="0" width="80" height="120" rx="4" fill="none" stroke="#6B7280" strokeWidth="2" className="dark:stroke-gray-600" />
+                  {/* Innovation rings */}
+                  <g transform="translate(120, 80)">
+                    <circle cx="0" cy="0" r="45" fill="none" stroke="#F97316" strokeWidth="2" opacity="0.3" />
+                    <circle cx="0" cy="0" r="35" fill="none" stroke="#F59E0B" strokeWidth="2" opacity="0.4" />
+                    <circle cx="0" cy="0" r="25" fill="none" stroke="#10B981" strokeWidth="2" opacity="0.5" />
 
-                    {/* Server units */}
-                    <rect x="5" y="10" width="70" height="15" rx="2" fill="url(#serverGradient)" opacity="0.7" />
-                    <rect x="5" y="30" width="70" height="15" rx="2" fill="url(#serverGradient)" opacity="0.8" />
-                    <rect x="5" y="50" width="70" height="15" rx="2" fill="url(#serverGradient)" opacity="0.6" />
-                    <rect x="5" y="70" width="70" height="15" rx="2" fill="url(#serverGradient)" opacity="0.9" />
-
-                    {/* Server indicators */}
-                    <circle cx="15" cy="17.5" r="2" fill="#10B981" />
-                    <circle cx="25" cy="17.5" r="2" fill="#F59E0B" />
-                    <circle cx="35" cy="17.5" r="2" fill="#EF4444" />
-
-                    <circle cx="15" cy="37.5" r="2" fill="#10B981" />
-                    <circle cx="25" cy="37.5" r="2" fill="#F59E0B" />
-                    <circle cx="35" cy="37.5" r="2" fill="#10B981" />
+                    {/* Central innovation hub */}
+                    <circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#F97316" strokeWidth="3" />
+                    <path d="M-6,-6 L6,6 M6,-6 L-6,6" stroke="#F97316" strokeWidth="2" />
                   </g>
 
-                  {/* Connection lines */}
-                  <g stroke="#F97316" strokeWidth="2" fill="none" opacity="0.6">
-                    <path d="M180 90 Q220 100 250 130" strokeDasharray="5,5" />
-                    <path d="M160 85 Q200 95 250 135" strokeDasharray="5,5" />
-                    <path d="M200 95 Q230 110 250 140" strokeDasharray="5,5" />
+                  {/* Network connections */}
+                  <g stroke="#6366F1" strokeWidth="1.5" fill="none" opacity="0.7">
+                    <path d="M120,80 Q200,120 200,150" strokeDasharray="4,4" />
+                    <path d="M120,80 Q160,40 280,60" strokeDasharray="4,4" />
+                    <path d="M280,60 Q320,80 350,100" strokeDasharray="4,4" />
+                    <path d="M200,150 Q250,170 320,160" strokeDasharray="4,4" />
                   </g>
 
-                  {/* Kubernetes pods */}
-                  <g transform="translate(40, 180)">
+                  {/* Service nodes */}
+                  <g>
+                    {/* Cloud node */}
                     <circle cx="50" cy="50" r="20" fill="#3B82F6" opacity="0.8" />
                     <circle cx="50" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-                    <text x="50" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="12" fontWeight="bold">K8s</text>
+                    <text x="50" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">Cloud</text>
 
-                    <circle cx="120" cy="50" r="20" fill="#10B981" opacity="0.8" />
-                    <circle cx="120" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-                    <text x="120" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">POD</text>
+                    {/* DevOps node */}
+                    <circle cx="350" cy="50" r="20" fill="#F59E0B" opacity="0.8" />
+                    <circle cx="350" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                    <text x="350" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">DevOps</text>
 
-                    <circle cx="190" cy="50" r="20" fill="#8B5CF6" opacity="0.8" />
-                    <circle cx="190" cy="50" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-                    <text x="190" y="55" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">SVC</text>
+                    {/* Security node */}
+                    <circle cx="50" cy="250" r="20" fill="#10B981" opacity="0.8" />
+                    <circle cx="50" cy="250" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                    <text x="50" y="255" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">Security</text>
+
+                    {/* Analytics node */}
+                    <circle cx="350" cy="250" r="20" fill="#8B5CF6" opacity="0.8" />
+                    <circle cx="350" cy="250" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                    <text x="350" y="255" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">Analytics</text>
                   </g>
 
-                  {/* CI/CD Pipeline */}
-                  <g transform="translate(50, 240)">
-                    <rect x="0" y="0" width="30" height="20" rx="3" fill="#6366F1" />
-                    <text x="15" y="12" textAnchor="middle" fill="#FFFFFF" fontSize="8">Code</text>
-
-                    <rect x="40" y="0" width="30" height="20" rx="3" fill="#F59E0B" />
-                    <text x="55" y="12" textAnchor="middle" fill="#FFFFFF" fontSize="8">Build</text>
-
-                    <rect x="80" y="0" width="30" height="20" rx="3" fill="#10B981" />
-                    <text x="95" y="12" textAnchor="middle" fill="#FFFFFF" fontSize="8">Test</text>
-
-                    <rect x="120" y="0" width="30" height="20" rx="3" fill="#EF4444" />
-                    <text x="135" y="12" textAnchor="middle" fill="#FFFFFF" fontSize="8">Deploy</text>
-
-                    {/* Pipeline flow */}
-                    <path d="M30 10 L40 10" stroke="#FFFFFF" strokeWidth="2" markerEnd="url(#arrow)" />
-                    <path d="M70 10 L80 10" stroke="#FFFFFF" strokeWidth="2" markerEnd="url(#arrow)" />
-                    <path d="M110 10 L120 10" stroke="#FFFFFF" strokeWidth="2" markerEnd="url(#arrow)" />
-
-                    <defs>
-                      <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-                        <path d="M0,0 L0,6 L9,3 z" fill="#FFFFFF" />
-                      </marker>
-                    </defs>
+                  {/* Success metrics */}
+                  <g transform="translate(80, 180)">
+                    <rect x="0" y="0" width="60" height="35" rx="8" fill="#FFFFFF" stroke="#F97316" strokeWidth="2" opacity="0.9" />
+                    <text x="30" y="15" textAnchor="middle" fill="#F97316" fontSize="12" fontWeight="bold">85%</text>
+                    <text x="30" y="28" textAnchor="middle" fill="#666666" fontSize="8">Faster Deploy</text>
                   </g>
 
-                  {/* Floating monitoring elements */}
-                  <g transform="translate(320, 50)">
-                    <circle cx="0" cy="0" r="25" fill="#F97316" opacity="0.7" />
-                    <path d="M-8,-8 L8,8 M8,-8 L-8,8" stroke="#FFFFFF" strokeWidth="2" />
-                    <circle cx="0" cy="0" r="15" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                  <g transform="translate(260, 180)">
+                    <rect x="0" y="0" width="60" height="35" rx="8" fill="#FFFFFF" stroke="#10B981" strokeWidth="2" opacity="0.9" />
+                    <text x="30" y="15" textAnchor="middle" fill="#10B981" fontSize="12" fontWeight="bold">99.9%</text>
+                    <text x="30" y="28" textAnchor="middle" fill="#666666" fontSize="8">Uptime SLA</text>
                   </g>
 
-                  <g transform="translate(320, 120)">
-                    <rect x="-15" y="-15" width="30" height="30" rx="4" fill="#10B981" opacity="0.7" />
-                    <path d="M-8,0 L0,8 L8,0 Z" fill="#FFFFFF" />
-                    <text x="0" y="20" textAnchor="middle" fill="#FFFFFF" fontSize="8">UP</text>
+                  {/* Floating achievement icons */}
+                  <g transform="translate(320, 40)">
+                    <circle cx="0" cy="0" r="18" fill="#F97316" opacity="0.8" />
+                    <path d="M-8,0 L-3,5 L8,0 L-3,-5 Z" fill="#FFFFFF" />
                   </g>
+
+                  <g transform="translate(60, 120)">
+                    <circle cx="0" cy="0" r="18" fill="#10B981" opacity="0.8" />
+                    <path d="M-6,-6 L6,6 M6,-6 L-6,6" stroke="#FFFFFF" strokeWidth="2" />
+                    <circle cx="0" cy="0" r="8" fill="none" stroke="#FFFFFF" strokeWidth="2" />
+                  </g>
+
+                  {/* Subtle glow effect */}
+                  <circle cx="200" cy="150" r="80" fill="url(#centerGlow)" />
                 </svg>
               </div>
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-orange-400 to-amber-500 rounded-lg shadow-lg flex items-center justify-center animate-bounce">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
 
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-indigo-400 to-cyan-500 rounded-lg shadow-lg flex items-center justify-center animate-pulse">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
             </div>
