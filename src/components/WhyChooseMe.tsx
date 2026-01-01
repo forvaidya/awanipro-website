@@ -76,7 +76,7 @@ export function WhyChooseMe() {
         <div className="bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 rounded-3xl p-8 md:p-12 text-white text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">Direct Access Advantage</h3>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Work directly with a 20+ year DevOps expert. No层层 management, no communication delays, no lost context.
+            Work directly with a 20+ year DevOps expert, no communication delays, no lost context.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
@@ -88,7 +88,7 @@ export function WhyChooseMe() {
               <div className="opacity-80">Just pure expertise</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold mb-2">No Politics</div>
+              <div className="text-3xl font-bold mb-2">Boundless Innovation</div>
               <div className="opacity-80">Focus on results</div>
             </div>
           </div>
