@@ -87,8 +87,9 @@ export function Contact() {
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2">Company</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  AwaniPro Private Limited<br />
-                  DevOps & Cloud Consulting
+                  Awanipro digital technologies private limited<br />
+                  <b>Registered Office: </b> 2086, Prestige Parkview, Hope Farm Whitefield Bangalore.
+                  <b>+91-9740500144</b>
                 </p>
               </div>
             </div>

@@ -13,7 +13,7 @@ export function About() {
             <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent mb-6">About AwaniPro</h2>
             <div className="space-y-4 text-gray-600 dark:text-gray-300">
               <p className="text-lg leading-relaxed">
-                AwaniPro Private Limited is a specialized DevOps and Cloud consulting company based in Bangalore, India, with over 20 years of hands-on expertise in enterprise infrastructure and cloud technologies.
+                Awanipro digital technologies private Limited is a specialized DevOps and Cloud consulting company based in Bangalore, India, with over 20 years of hands-on expertise in enterprise infrastructure and cloud technologies.
               </p>
               <p className="text-lg leading-relaxed">
                 Founded by Mahesh Vaidya, a seasoned DevOps professional and former Flipkart alumni, AwaniPro brings deep technical expertise, proven execution capabilities, and a commitment to delivering solutions that drive business transformation through technology.
