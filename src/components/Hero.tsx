@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+
 export function Hero() {
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
@@ -10,9 +12,9 @@ export function Hero() {
     '/media/tech-infrastructure-3.svg'
   ];
   
-  const [currentImage, setCurrentImage] = React.useState('');
+  const [currentImage, setCurrentImage] = useState('');
   
-  React.useEffect(() => {
+  useEffect(() => {
     // Pick a random image on component mount
     const randomIndex = Math.floor(Math.random() * techImages.length);
     setCurrentImage(techImages[randomIndex]);
