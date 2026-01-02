@@ -21,6 +21,22 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    // Set dynamic canonical URL based on current domain
+    const currentHost = window.location.hostname;
+    const protocol = window.location.protocol;
+    const canonicalUrl = `${protocol}//${currentHost}/`;
+
+    // Find or create canonical link element
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.href = canonicalUrl;
+  }, []);
+
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
