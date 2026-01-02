@@ -18,7 +18,7 @@ try {
 } as const;
 `;
 
-  writeFileSync(`${__dirname}/../src/build-info.ts`, versionContent);
+  writeFileSync(`${__dirname}/../src/build-info.generated.ts`, versionContent);
   console.log(`✓ Generated build info: SHA ${sha} on ${branch}`);
 } catch (error) {
   console.error('Failed to generate build info:', error.message);
@@ -30,6 +30,6 @@ try {
   url: '#',
 } as const;
 `;
-  writeFileSync(`${__dirname}/../src/build-info.ts`, fallbackContent);
+  writeFileSync(`${__dirname}/../src/build-info.generated.ts`, fallbackContent);
   console.log('✓ Generated fallback build info');
 }

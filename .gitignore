@@ -36,3 +36,6 @@ build/
 
 # TypeScript
 *.tsbuildinfo
+
+# Generated files
+src/build-info.generated.ts
