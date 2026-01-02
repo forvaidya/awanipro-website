@@ -1,8 +1,10 @@
 import { config } from '../config';
 import { businessConfig } from '../config/business';
+import { getVersionInfo } from '../utils/version';
 
 export function Footer() {
   const { company, legal } = businessConfig;
+  const buildInfo = getVersionInfo();
 
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12">
@@ -86,6 +88,15 @@ export function Footer() {
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-gray-400 text-sm">
               <p>&copy; {new Date().getFullYear()} AwaniPro Private Limited. All rights reserved.</p>
               <p>Built with Hono + Vite for Cloudflare Pages</p>
+              <a
+                href={buildInfo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`Built: ${new Date(buildInfo.timestamp).toLocaleString()}`}
+                className="text-blue-400 hover:text-blue-300 transition font-mono text-xs"
+              >
+                {buildInfo.sha}
+              </a>
             </div>
 
             {/* Legal IDs - Always horizontal, no stacking */}
