@@ -45,9 +45,9 @@ export function About() {
               <div className="mb-6">
                 <div className="relative inline-block mb-4">
                   <img
-                    src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${founder.avatarSeed}`}
+                    src="/media/mahesh-profile.jpg"
                     alt={founder.name}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-indigo-500 group-hover:border-pink-500 transition-colors duration-300"
+                    className="w-24 h-24 rounded-full object-cover border-4 border-indigo-500 group-hover:border-pink-500 transition-all duration-500 grayscale group-hover:grayscale-0"
                   />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white">{founder.name}</h4>
