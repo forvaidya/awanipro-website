@@ -26,7 +26,7 @@ export const businessConfig = {
     email: 'mahesh.vaidya@awanipro.com',
     location: 'Bangalore, India',
     avatarSeed: 'mahesh',
-    bio: 'Serial entrepreneur with proven track record. 20+ years of hands-on DevOps and cloud infrastructure experience. Former Flipkart alumni with deep expertise in scaling cloud operations.',
+    bio: 'Serial entrepreneur with proven track record. 20+ years of hands-on DevOps and cloud infrastructure experience. Ex Platform Engineer at Flipkart CPG with deep expertise in scaling cloud operations.',
     linkedinUrl: 'https://www.linkedin.com/in/gitbangalore/',
   },
 
