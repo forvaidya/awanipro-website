@@ -107,7 +107,7 @@ Done! Your `staging` environment now has all the same variables as `prod`, with 
 
 ## Prerequisites
 
-- **GitHub CLI (`gh`)** installed and authenticated
+- **GitHub CLI (gh)** installed and authenticated
 - **jq** for JSON parsing (optional but recommended)
 - Repository push access to create environments
 
