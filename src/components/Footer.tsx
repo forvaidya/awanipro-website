@@ -81,13 +81,13 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section - Always horizontal */}
+        {/* Bottom Section - Responsive layout */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-row flex-wrap justify-between items-center gap-4">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6">
             {/* Copyright and Tech Info */}
-            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-gray-400 text-sm">
-              <p>&copy; {new Date().getFullYear()} AwaniPro Private Limited. All rights reserved.</p>
-              <p>Built with Hono + Vite for Cloudflare Pages</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-6 text-gray-400 text-xs sm:text-sm">
+              <p className="text-center sm:text-left">&copy; {new Date().getFullYear()} AwaniPro Private Limited. All rights reserved.</p>
+              <p className="hidden sm:inline">Built with Hono + Vite for Cloudflare Pages</p>
               <a
                 href={buildInfo.url}
                 target="_blank"
@@ -99,15 +99,15 @@ export function Footer() {
               </a>
             </div>
 
-            {/* Legal IDs - Always horizontal, no stacking */}
-            <div className="flex flex-row items-center gap-6 text-gray-400 text-sm">
+            {/* Legal IDs - Responsive stacking */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-gray-400 text-sm">
               <div className="flex items-center space-x-2">
                 <span className="font-medium">CIN:</span>
                 <a
                   href={config.assets.registrationCertificate}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 transition whitespace-nowrap"
+                  className="text-blue-400 hover:text-blue-300 transition whitespace-nowrap text-xs sm:text-sm"
                 >
                   {legal.cin}
                 </a>
@@ -118,7 +118,7 @@ export function Footer() {
                   href={config.assets.gstCertificate}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 transition whitespace-nowrap"
+                  className="text-blue-400 hover:text-blue-300 transition whitespace-nowrap text-xs sm:text-sm"
                 >
                   {legal.gstin}
                 </a>
