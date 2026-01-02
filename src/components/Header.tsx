@@ -17,13 +17,17 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-sm">
       <nav className="container-max py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <img 
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center gap-2 hover:opacity-80 transition"
+        >
+          <img
             src="/media/awanipro-final-logo.svg"
-            alt="AwaniPro Logo" 
-            className="h-12 w-auto object-contain dark:invert"
+            alt="AwaniPro Logo"
+            className="h-12 w-auto object-contain dark:invert cursor-pointer"
           />
-        </div>
+        </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
