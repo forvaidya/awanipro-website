@@ -114,3 +114,7 @@ Done! Your `staging` environment now has all the same variables as `prod`, with 
 ## Conclusion
 
 By automating environment replication with `gh CLI`, you eliminate manual configuration errors and significantly reduce setup time for new environments. This approach scales beautifully as your number of environments grows, making it especially valuable in complex CI/CD pipelines.
+
+---
+
+**Originally published on Medium:** [Automating GitHub Environment Replication](https://medium.com/@forvaidya/automating-github-environment-replication-c47ae959c2fc)
