@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { blogPosts } from '../data/blogPosts';
 import ReactMarkdown from 'react-markdown';
 import { businessConfig } from '../config/business';
-import matter from 'gray-matter';
 
 interface BlogPostData {
   id: string;
@@ -32,7 +31,11 @@ export function Blog() {
     try {
       const response = await fetch(post.contentPath);
       const fileContent = await response.text();
-      const { content } = matter(fileContent);
+
+      // Parse frontmatter manually - remove everything between first and second ---
+      const frontmatterRegex = /^---[\s\S]*?---\n/;
+      const content = fileContent.replace(frontmatterRegex, '').trim();
+
       setSelectedPost({ ...post, content });
     } catch (error) {
       console.error('Error loading blog post:', error);

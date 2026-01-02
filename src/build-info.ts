@@ -1,6 +1,6 @@
 export const BUILD_INFO = {
-  sha: '34dabdf',
+  sha: '06b5135',
   branch: 'main',
-  timestamp: '2026-01-02T12:33:44.815Z',
-  url: 'https://github.com/forvaidya/awanipro-website/commit/34dabdf',
+  timestamp: '2026-01-02T12:35:17.024Z',
+  url: 'https://github.com/forvaidya/awanipro-website/commit/06b5135',
 } as const;
