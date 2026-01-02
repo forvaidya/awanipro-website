@@ -19,7 +19,7 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
       <nav className="container-max py-4 flex items-center justify-between">
         <button
           type="button"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => scrollToSection('home')}
           className="flex items-center gap-2 hover:opacity-80 transition"
         >
           <img
