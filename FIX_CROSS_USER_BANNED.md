@@ -9,7 +9,7 @@ This means the CNAME you added is from a different Cloudflare account/zone than 
 
 ## ✅ The Solution
 
-Since your domain (`awanipto.com`) **already uses Cloudflare nameservers**, you should:
+Since your domain (`awanipro.com`) **already uses Cloudflare nameservers**, you should:
 
 **NOT** manually add CNAME records
 **INSTEAD** add the domain directly in Cloudflare Pages!
@@ -25,7 +25,7 @@ Since your domain (`awanipto.com`) **already uses Cloudflare nameservers**, you 
 1. **Cloudflare Dashboard** → **Pages** → **awanipro-website**
 2. Go to **Settings** → **Domains**
 3. Click **Add custom domain**
-4. Enter: `beta.awanipto.com`
+4. Enter: `beta.awanipro.com`
 5. Cloudflare will show DNS configuration options
 6. Choose: **Use Cloudflare Nameservers** (already set!)
 7. Click **Activate domain**
@@ -37,7 +37,7 @@ Since your domain (`awanipto.com`) **already uses Cloudflare nameservers**, you 
 
 ### Step 4: Test
 Once done:
-- Visit: `https://beta.awanipto.com`
+- Visit: `https://beta.awanipro.com`
 - Your site should be live! ✨
 
 ## 🎯 Key Point

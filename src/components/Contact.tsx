@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { config } from '../config';
+import { businessConfig } from '../config/business';
 
 export function Contact() {
+  const { company, form } = businessConfig;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,8 +33,8 @@ export function Contact() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          subject: 'New Contact Form Submission from AwaniPro Website',
-          from_name: 'AwaniPro Website',
+          subject: form.subjectLine,
+          from_name: form.senderName,
         }),
       });
 
@@ -74,22 +76,22 @@ export function Contact() {
             <div className="space-y-8">
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2">Email</h3>
-                <a href="mailto:mahesh.vaidya@awanipro.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-                  mahesh.vaidya@awanipro.com
+                <a href={`mailto:${company.email}`} className="text-blue-600 dark:text-blue-400 hover:underline">
+                  {company.email}
                 </a>
               </div>
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2">Location</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Bangalore, India
+                  {company.location}
                 </p>
               </div>
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2">Company</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Awanipro digital technologies private limited<br />
-                  <b>Registered Office: </b> 2086, Prestige Parkview, Hope Farm Whitefield Bangalore.
-                  <b>+91-9740500144</b>
+                  {company.name}<br />
+                  <b>Registered Office: </b> {company.registeredOffice}
+                  <b>{company.phone}</b>
                 </p>
               </div>
             </div>
@@ -98,7 +100,7 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                  Name
+                  {form.labels.name}
                 </label>
                 <input
                   type="text"
@@ -107,13 +109,13 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="Your name"
+                  placeholder={form.placeholders.name}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                  Email
+                  {form.labels.email}
                 </label>
                 <input
                   type="email"
@@ -122,13 +124,13 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="your@email.com"
+                  placeholder={form.placeholders.email}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                  Message
+                  {form.labels.message}
                 </label>
                 <textarea
                   name="message"
@@ -137,7 +139,7 @@ export function Contact() {
                   required
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="Tell us about your project..."
+                  placeholder={form.placeholders.message}
                 />
               </div>
 

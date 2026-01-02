@@ -1,13 +1,16 @@
 import { config } from '../config';
+import { businessConfig } from '../config/business';
 
 export function Footer() {
+  const { company, legal } = businessConfig;
+
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h4 className="font-bold mb-4">AwaniPro</h4>
+            <h4 className="font-bold mb-4">{company.shortName}</h4>
             <p className="text-gray-400 text-sm">
               Expert DevOps & Cloud Consulting for enterprise-grade infrastructure.
             </p>
@@ -39,12 +42,12 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <p className="text-gray-400 text-sm mb-2">
-              <a href="mailto:mahesh.vaidya@awanipro.com" className="hover:text-white transition">
-                mahesh.vaidya@awanipro.com
+              <a href={`mailto:${company.email}`} className="hover:text-white transition">
+                {company.email}
               </a>
             </p>
             <p className="text-gray-400 text-sm">
-              Bangalore, India
+              {company.location}
             </p>
           </div>
 
@@ -95,7 +98,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition whitespace-nowrap"
                 >
-                  U63999KA2024PTC187047
+                  {legal.cin}
                 </a>
               </div>
               <div className="flex items-center space-x-2">
@@ -106,7 +109,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition whitespace-nowrap"
                 >
-                  29ABACA4737C1ZW
+                  {legal.gstin}
                 </a>
               </div>
             </div>

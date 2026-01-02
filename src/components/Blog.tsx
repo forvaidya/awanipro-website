@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { blogPosts } from '../data/blogPosts';
 import ReactMarkdown from 'react-markdown';
+import { businessConfig } from '../config/business';
 
 interface BlogPostData {
   id: string;
@@ -16,6 +17,7 @@ interface SelectedPost extends BlogPostData {
 }
 
 export function Blog() {
+  const { blog } = businessConfig;
   const [selectedPost, setSelectedPost] = useState<SelectedPost | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -43,9 +45,9 @@ export function Blog() {
         {!selectedPost ? (
           <>
             <div className="text-center mb-12">
-              <h2 className="section-title">DevOps & Cloud Blog</h2>
+              <h2 className="section-title">{blog.sectionTitle}</h2>
               <p className="section-subtitle">
-                Stay ahead of the curve with expert insights on Kubernetes, AWS, Git workflows, cloud infrastructure, and DevOps best practices. From CI/CD pipelines to cost optimization strategies, we explore the technologies and methodologies that drive modern software delivery at scale.
+                {blog.sectionDescription}
               </p>
             </div>
 
@@ -117,23 +119,23 @@ export function Blog() {
                 <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
                   <ReactMarkdown
                     components={{
-                      h1: ({node, ...props}) => <h1 className="text-3xl font-bold my-6 text-gray-900 dark:text-white" {...props} />,
-                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold my-5 text-gray-900 dark:text-white mt-8" {...props} />,
-                      h3: ({node, ...props}) => <h3 className="text-xl font-bold my-4 text-gray-900 dark:text-white" {...props} />,
-                      h4: ({node, ...props}) => <h4 className="text-lg font-bold my-3 text-gray-900 dark:text-white" {...props} />,
-                      p: ({node, ...props}) => <p className="my-4 leading-relaxed" {...props} />,
-                      ul: ({node, ...props}) => <ul className="list-disc list-inside my-4 space-y-2" {...props} />,
-                      ol: ({node, ...props}) => <ol className="list-decimal list-inside my-4 space-y-2" {...props} />,
-                      li: ({node, ...props}) => <li className="ml-4" {...props} />,
-                      blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-indigo-500 pl-4 italic my-4 text-gray-600 dark:text-gray-400" {...props} />,
-                      code: ({node, inline, ...props}: any) => 
-                        inline ? 
-                          <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono" {...props} /> :
-                          <code className="bg-gray-100 dark:bg-gray-800 p-4 rounded block my-4 text-sm font-mono overflow-x-auto" {...props} />,
-                      pre: ({node, ...props}) => <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded my-4 overflow-x-auto" {...props} />,
-                      table: ({node, ...props}) => <table className="border-collapse border border-gray-300 dark:border-gray-700 my-4 w-full" {...props} />,
-                      th: ({node, ...props}) => <th className="border border-gray-300 dark:border-gray-700 p-2 bg-gray-100 dark:bg-gray-800 text-left" {...props} />,
-                      td: ({node, ...props}) => <td className="border border-gray-300 dark:border-gray-700 p-2" {...props} />,
+                      h1: ({node, ...props}) => <h1 className={blog.markdownStyles.h1} {...props} />,
+                      h2: ({node, ...props}) => <h2 className={blog.markdownStyles.h2} {...props} />,
+                      h3: ({node, ...props}) => <h3 className={blog.markdownStyles.h3} {...props} />,
+                      h4: ({node, ...props}) => <h4 className={blog.markdownStyles.h4} {...props} />,
+                      p: ({node, ...props}) => <p className={blog.markdownStyles.p} {...props} />,
+                      ul: ({node, ...props}) => <ul className={blog.markdownStyles.ul} {...props} />,
+                      ol: ({node, ...props}) => <ol className={blog.markdownStyles.ol} {...props} />,
+                      li: ({node, ...props}) => <li className={blog.markdownStyles.li} {...props} />,
+                      blockquote: ({node, ...props}) => <blockquote className={blog.markdownStyles.blockquote} {...props} />,
+                      code: ({node, inline, ...props}: any) =>
+                        inline ?
+                          <code className={blog.markdownStyles.code_inline} {...props} /> :
+                          <code className={blog.markdownStyles.code_block} {...props} />,
+                      pre: ({node, ...props}) => <pre className={blog.markdownStyles.pre} {...props} />,
+                      table: ({node, ...props}) => <table className={blog.markdownStyles.table} {...props} />,
+                      th: ({node, ...props}) => <th className={blog.markdownStyles.th} {...props} />,
+                      td: ({node, ...props}) => <td className={blog.markdownStyles.td} {...props} />,
                     }}
                   >
                     {selectedPost.content}
