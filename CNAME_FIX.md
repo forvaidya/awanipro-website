@@ -36,13 +36,13 @@ beta → awanipro-website.<YOUR-HASH>.pages.dev
 ## Wait for Propagation
 
 - DNS typically updates in **5-30 minutes**
-- Check with: `nslookup beta.devops-ranch.in`
+- Check with: `nslookup beta.awanipto.com`
 - Should show it's pointing to `.pages.dev` not `.workers.dev`
 
 ## Then Test
 
 Once DNS propagates:
-- Visit: `https://beta.devops-ranch.in`
+- Visit: `https://beta.awanipto.com`
 - Should show your AwaniPro website! ✨
 
 ---

@@ -63,7 +63,7 @@ npm run preview
 ## 🌐 Deployment to Cloudflare Pages
 
 ### Current Deployment Target
-- **Domain**: `beta.devops-ranch.in` (Cloudflare)
+- **Domain**: `beta.awanipto.com` (Cloudflare)
 - **Status**: Production-ready
 - **SSL**: Auto-provisioned by Cloudflare
 - **CDN**: Global Cloudflare CDN
@@ -100,11 +100,11 @@ In Cloudflare Pages → Project Settings → Build configuration:
 | **Root directory** | `/` (default) |
 | **Node version** | 18 (set in `package.json`) |
 
-### Step 4: Deploy to Custom Domain (beta.devops-ranch.in)
+### Step 4: Deploy to Custom Domain (beta.awanipto.com)
 
 1. In Cloudflare Pages project → **Settings** → **Domains**
 2. Click **Add custom domain**
-3. Enter domain: `beta.devops-ranch.in`
+3. Enter domain: `beta.awanipto.com`
 4. Choose: **Use Cloudflare nameservers** (recommended) OR **Add CNAME record**
 
 **Option A: Cloudflare Nameservers (Easiest)**
@@ -115,7 +115,7 @@ In Cloudflare Pages → Project Settings → Build configuration:
 
 **Option B: CNAME Record**
 - In your domain registrar's DNS settings
-- Add CNAME record: `beta.devops-ranch.in` → `awanipro-website.<pages-hash>.pages.dev`
+- Add CNAME record: `beta.awanipto.com` → `awanipro-website.<pages-hash>.pages.dev`
 - Hash provided by Cloudflare Pages
 
 5. **Verify** once DNS propagates
@@ -127,8 +127,8 @@ Add to Cloudflare Pages → **Settings** → **Environment variables**:
 
 ```
 # Production (auto-deployed)
-VITE_API_URL=https://api.devops-ranch.in
-VITE_DOMAIN=beta.devops-ranch.in
+VITE_API_URL=https://api.awanipto.com
+VITE_DOMAIN=beta.awanipto.com
 NODE_ENV=production
 ```
 
@@ -136,8 +136,8 @@ NODE_ENV=production
 
 After DNS propagates (5-30 mins):
 
-1. Visit `https://beta.devops-ranch.in` ✓
-2. Check Cloudflare Analytics: Dashboard → `beta.devops-ranch.in` → **Analytics**
+1. Visit `https://beta.awanipto.com` ✓
+2. Check Cloudflare Analytics: Dashboard → `beta.awanipto.com` → **Analytics**
 3. Verify SSL: 🔒 Green lock icon in browser
 4. Test all pages: Home, About, Services, Blog, Contact
 
@@ -149,7 +149,7 @@ After DNS propagates (5-30 mins):
 git add .
 git commit -m "Update blog posts"
 git push origin main
-# → Cloudflare Pages auto-builds and deploys to beta.devops-ranch.in
+# → Cloudflare Pages auto-builds and deploys to beta.awanipto.com
 ```
 
 Monitor deployments:
@@ -161,17 +161,17 @@ Monitor deployments:
 
 For different environments, create Cloudflare environment variables:
 
-**Production** (`beta.devops-ranch.in`):
+**Production** (`beta.awanipto.com`):
 ```env
 VITE_ENVIRONMENT=production
-VITE_API_URL=https://api.devops-ranch.in
+VITE_API_URL=https://api.awanipto.com
 VITE_CONTACT_EMAIL=hello@awanipro.com
 ```
 
 (Future) **Staging**:
 ```env
 VITE_ENVIRONMENT=staging
-VITE_API_URL=https://staging-api.devops-ranch.in
+VITE_API_URL=https://staging-api.awanipto.com
 ```
 
 ## 📝 File Structure

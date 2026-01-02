@@ -1,6 +1,6 @@
 # GitHub Actions + Cloudflare Pages Auto-Deployment Guide
 
-Complete guide to deploy your AwaniPro website automatically to **beta.devops-ranch.in** via GitHub Actions.
+Complete guide to deploy your AwaniPro website automatically to **beta.awanipto.com** via GitHub Actions.
 
 ## 🎯 Overview
 
@@ -18,7 +18,7 @@ Before setting up GitHub Actions, you need:
 1. **GitHub Repository** - Your code on GitHub
 2. **Cloudflare Account** - Free or paid
 3. **Cloudflare Pages Project** - Created and named `awanipro-website`
-4. **Domain** - `beta.devops-ranch.in` (with Cloudflare DNS)
+4. **Domain** - `beta.awanipto.com` (with Cloudflare DNS)
 5. **API Credentials** - Cloudflare API Token & Account ID
 
 ## 🔑 Step 1: Get Cloudflare API Credentials
@@ -121,7 +121,7 @@ Cloudflare **automatically creates CNAME** for your Pages project!
 2. Select your `awanipro-website` project
 3. Go to **Settings** → **Domains**
 4. Click **Add custom domain**
-5. Enter: `beta.devops-ranch.in`
+5. Enter: `beta.awanipto.com`
 6. Choose setup method (nameserver or CNAME)
 7. Follow the prompts
 
@@ -147,7 +147,7 @@ git push origin main
 ### Verify deployment:
 
 Once complete:
-- Visit `https://beta.devops-ranch.in` 
+- Visit `https://beta.awanipto.com` 
 - Check SSL: 🔒 Green lock
 - Cloudflare **auto-provisions free SSL** ✅
 
@@ -156,7 +156,7 @@ Once complete:
 Cloudflare **automatically manages CNAME** in two ways:
 
 ### 1. If using Cloudflare Nameservers
-- Nameserver setup automatically routes `beta.devops-ranch.in` → Pages
+- Nameserver setup automatically routes `beta.awanipto.com` → Pages
 - No manual CNAME needed!
 
 ### 2. If using CNAME Record
@@ -213,11 +213,11 @@ Cloudflare **automatically manages CNAME** in two ways:
 - [ ] Added `CLOUDFLARE_ACCOUNT_ID` secret to GitHub
 - [ ] Verified `.github/workflows/deploy.yml` exists
 - [ ] Created Cloudflare Pages project (`awanipro-website`)
-- [ ] Set domain to `beta.devops-ranch.in`
+- [ ] Set domain to `beta.awanipto.com`
 - [ ] Configured nameservers OR CNAME record
 - [ ] Pushed code to `main` branch
 - [ ] Verified deployment in GitHub Actions
-- [ ] Visited `https://beta.devops-ranch.in` ✅
+- [ ] Visited `https://beta.awanipto.com` ✅
 
 ## 🎉 Now What?
 
