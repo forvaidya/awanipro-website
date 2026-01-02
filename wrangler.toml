@@ -11,4 +11,4 @@ VITE_WEB3FORMS_KEY = "6be5f6a6-c4ae-40bf-bc5d-38778cbdd171"
 
 # Production-specific variables (uncomment when needed)
 # [env.production.vars]
-# VITE_BASE_URL = "https://beta.devops-ranch.in"
+# VITE_BASE_URL = "https://beta.awanipro.com"

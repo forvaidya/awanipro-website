@@ -5,7 +5,7 @@ I have a DevOps consulting website built with Hono + Vite + React + Tailwind CSS
 
 Repository: https://github.com/forvaidya/awanipro-website
 Live sites: 
-- Beta: https://beta.devops-ranch.in
+- Beta: https://beta.awanipro.com
 - Production (future): https://awanipro.com
 
 ## Important Constraints
@@ -52,7 +52,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://beta.devops-ranch.in/sitemap.xml
+Sitemap: https://beta.awanipro.com/sitemap.xml
 Sitemap: https://awanipro.com/sitemap.xml
 
 # Block admin/build artifacts if needed in future
@@ -68,7 +68,7 @@ Sitemap: https://awanipro.com/sitemap.xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://beta.devops-ranch.in/</loc>
+    <loc>https://beta.awanipro.com/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -76,7 +76,7 @@ Sitemap: https://awanipro.com/sitemap.xml
   
   <!-- About Section -->
   <url>
-    <loc>https://beta.devops-ranch.in/#about</loc>
+    <loc>https://beta.awanipro.com/#about</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -84,7 +84,7 @@ Sitemap: https://awanipro.com/sitemap.xml
   
   <!-- Services Section -->
   <url>
-    <loc>https://beta.devops-ranch.in/#services</loc>
+    <loc>https://beta.awanipro.com/#services</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -92,7 +92,7 @@ Sitemap: https://awanipro.com/sitemap.xml
   
   <!-- Contact Section -->
   <url>
-    <loc>https://beta.devops-ranch.in/#contact</loc>
+    <loc>https://beta.awanipro.com/#contact</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -118,7 +118,7 @@ Sitemap: https://awanipro.com/sitemap.xml
 <meta name="language" content="English">
 
 <!-- Canonical URL -->
-<link rel="canonical" href="https://beta.devops-ranch.in/">
+<link rel="canonical" href="https://beta.awanipro.com/">
 ```
 
 ---
@@ -136,8 +136,8 @@ Sitemap: https://awanipro.com/sitemap.xml
   "name": "AwaniPro",
   "alternateName": "AwaniPro Private Limited",
   "description": "DevOps and Cloud Consulting Services specializing in Kubernetes, AWS, Azure, CI/CD, and Infrastructure as Code",
-  "url": "https://beta.devops-ranch.in",
-  "logo": "https://beta.devops-ranch.in/logo.svg",
+  "url": "https://beta.awanipro.com",
+  "logo": "https://beta.awanipro.com/logo.svg",
   "email": "mahesh.vaidya@awanipro.com",
   "address": {
     "@type": "PostalAddress",
@@ -257,7 +257,7 @@ All changes are invisible to users (no UI modifications)
 
 1. **GTM Container ID**: Replace `GTM-XXXXXXX` with your actual GTM ID from https://tagmanager.google.com
    - Create GTM account
-   - Create container for "awanipro.com" or "beta.devops-ranch.in"
+   - Create container for "awanipro.com" or "beta.awanipro.com"
    - Get container ID (format: GTM-XXXXXXX)
    - Replace in both `<head>` and `<body>` GTM scripts
 
@@ -268,8 +268,8 @@ All changes are invisible to users (no UI modifications)
 
 ### Testing After Deployment:
 
-1. **robots.txt**: `https://beta.devops-ranch.in/robots.txt`
-2. **sitemap.xml**: `https://beta.devops-ranch.in/sitemap.xml`
+1. **robots.txt**: `https://beta.awanipro.com/robots.txt`
+2. **sitemap.xml**: `https://beta.awanipro.com/sitemap.xml`
 3. **GTM**: Check browser console for GTM dataLayer
 4. **Structured Data**: https://search.google.com/test/rich-results
 5. **Lighthouse SEO**: Chrome DevTools → Lighthouse → SEO audit

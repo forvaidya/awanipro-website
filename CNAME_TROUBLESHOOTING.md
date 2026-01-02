@@ -8,7 +8,7 @@ Here's how to fix it step by step:
 
 1. **Cloudflare Dashboard** → **Pages** → **awanipro-website**
 2. Go to **Settings** → **Domains**
-3. Check the status of `beta.devops-ranch.in`
+3. Check the status of `beta.awanipro.com`
 4. Should show: ✅ **Active** or similar status
 
 **If showing error:**
@@ -36,7 +36,7 @@ DNS changes can take:
 
 **Check if DNS is propagated:**
 ```bash
-nslookup beta.devops-ranch.in
+nslookup beta.awanipro.com
 ```
 
 Should show the CNAME pointing to Cloudflare Pages.
@@ -57,7 +57,7 @@ Should show the CNAME pointing to Cloudflare Pages.
 
 ## 🚨 If Still Not Working
 
-1. **Go to:** Cloudflare Dashboard → **devops-ranch.in** domain
+1. **Go to:** Cloudflare Dashboard → **awanipro.com** domain
 2. **Check:** DNS records for `beta` subdomain
 3. **Verify:** CNAME points to `awanipro-website.<hash>.pages.dev`
 4. **Look for:** Any other `beta` records that might conflict
@@ -75,4 +75,4 @@ This is **easier and more reliable** than CNAME if you control the registrar!
 
 ---
 
-**Once DNS propagates:** Visit `https://beta.devops-ranch.in` and your site will be live! 🚀
+**Once DNS propagates:** Visit `https://beta.awanipro.com` and your site will be live! 🚀

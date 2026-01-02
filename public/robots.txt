@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://beta.devops-ranch.in/sitemap.xml
+Sitemap: https://beta.awanipro.com/sitemap.xml
 Sitemap: https://awanipro.com/sitemap.xml
 
 # Block admin/build artifacts if needed in future
