@@ -20,7 +20,7 @@ export function About() {
                 {company.description}
               </p>
               <p className="text-lg leading-relaxed">
-                Founded by {founder.name}, a seasoned DevOps professional and former Flipkart alumni, {company.shortName} brings deep technical expertise, proven execution capabilities, and a commitment to delivering solutions that drive business transformation through technology.
+                Founded by {founder.name}, a seasoned DevOps professional and Flipkart alumni, {company.shortName} brings deep technical expertise, proven execution capabilities, and a commitment to delivering solutions that drive business transformation through technology.
               </p>
               <p className="text-lg leading-relaxed">
                 {company.mission}
