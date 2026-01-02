@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { blogPosts } from '../data/blogPosts';
 import ReactMarkdown from 'react-markdown';
 import { businessConfig } from '../config/business';
+import matter from 'gray-matter';
 
 interface BlogPostData {
   id: string;
@@ -30,7 +31,8 @@ export function Blog() {
     setLoading(true);
     try {
       const response = await fetch(post.contentPath);
-      const content = await response.text();
+      const fileContent = await response.text();
+      const { content } = matter(fileContent);
       setSelectedPost({ ...post, content });
     } catch (error) {
       console.error('Error loading blog post:', error);
