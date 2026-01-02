@@ -9,6 +9,14 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: '004-automating-github-environment-replication',
+    title: 'Automating GitHub Environment Replication with gh CLI',
+    date: '2026-01-02',
+    author: 'Mahesh Vaidya',
+    description: 'Streamline GitHub Actions environment setup by automating variable replication from a reference environment using gh CLI, reducing manual errors and saving time.',
+    contentPath: '/content/blog/004-automating-github-environment-replication.md'
+  },
+  {
     id: '003-git-merge-vs-rebase',
     title: 'Git Merge vs Rebase: A Comprehensive Guide',
     date: '2025-01-20',
