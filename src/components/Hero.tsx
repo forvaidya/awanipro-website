@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useLazyLoad } from '../hooks/useLazyLoad';
 
 export function Hero() {
   const scrollToContact = () => {
@@ -14,7 +13,6 @@ export function Hero() {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { elementRef: heroVisualRef, isVisible: isHeroVisible } = useLazyLoad<HTMLDivElement>();
 
   useEffect(() => {
     // Cycle through images every 3 minutes (180 seconds)
@@ -113,10 +111,10 @@ export function Hero() {
           </div>
 
           {/* Hero visual - Smooth cycling technology infrastructure */}
-          <div ref={heroVisualRef} className="relative lg:block hidden">
+          <div className="relative lg:block hidden">
             <div className="relative">
               <div className="w-full h-96 relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-800 dark:via-blue-900/10 dark:to-indigo-900/10">
-                {isHeroVisible && techImages.map((image, index) => (
+                {techImages.map((image, index) => (
                   <img
                     key={index}
                     src={image}
