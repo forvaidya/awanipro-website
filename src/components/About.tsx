@@ -48,7 +48,9 @@ export function About() {
                 <div className="relative inline-block mb-4">
                   <img
                     ref={profileImageRef}
-                    src={isProfileImageVisible ? "/media/mahesh-profile.jpg" : ""}
+                    srcSet={isProfileImageVisible ? "/media/mahesh-profile-sm.jpg 128w, /media/mahesh-profile-md.jpg 192w" : ""}
+                    src={isProfileImageVisible ? "/media/mahesh-profile-md.jpg" : ""}
+                    sizes="(max-width: 768px) 128px, 192px"
                     alt={founder.name}
                     className="w-24 h-24 rounded-full object-cover border-4 border-indigo-500 group-hover:border-pink-500 transition-all duration-500 grayscale group-hover:grayscale-0"
                   />

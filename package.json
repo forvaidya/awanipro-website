@@ -6,7 +6,8 @@
   "main": "src/index.tsx",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/gen-version.js && vite build",
+    "optimize-images": "node scripts/optimize-images.js",
+    "build": "npm run optimize-images && node scripts/gen-version.js && vite build",
     "preview": "vite preview",
     "type-check": "tsc --noEmit"
   },
