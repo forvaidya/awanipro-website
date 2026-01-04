@@ -1,7 +1,9 @@
 import { businessConfig } from '../config/business';
+import { useLazyLoad } from '../hooks/useLazyLoad';
 
 export function About() {
   const { company, founder, stats } = businessConfig;
+  const { elementRef: profileImageRef, isVisible: isProfileImageVisible } = useLazyLoad<HTMLImageElement>();
 
   return (
     <section id="about" className="relative py-20 sm:py-32 bg-gray-50 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 overflow-hidden">
@@ -45,7 +47,8 @@ export function About() {
               <div className="mb-6">
                 <div className="relative inline-block mb-4">
                   <img
-                    src="/media/mahesh-profile.jpg"
+                    ref={profileImageRef}
+                    src={isProfileImageVisible ? "/media/mahesh-profile.jpg" : ""}
                     alt={founder.name}
                     className="w-24 h-24 rounded-full object-cover border-4 border-indigo-500 group-hover:border-pink-500 transition-all duration-500 grayscale group-hover:grayscale-0"
                   />
