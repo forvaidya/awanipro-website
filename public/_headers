@@ -1,31 +1,42 @@
 # Cloudflare Cache Control Headers
+# Optimized for maximum cache efficiency and repeat visit performance
 
-# Hashed assets - aggressive caching (forever)
+# Hashed/versioned assets - aggressive caching (1 year, immutable)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
 
-# HTML files - revalidate on every request
+# HTML files - cache with revalidation (1 hour)
 /index.html
 /blog/*
 /content/*
   Cache-Control: public, max-age=3600, must-revalidate
   X-Content-Type-Options: nosniff
 
-# PDFs - cache for 1 week
+# Static files - extended cache (7 days)
 /*.pdf
   Cache-Control: public, max-age=604800
 
-# SEO files - cache for 1 day
+# SEO/metadata files - daily cache (1 day)
 /robots.txt
 /sitemap.xml
   Cache-Control: public, max-age=86400
 
-# Images and media - aggressive caching
+# Images and media - aggressive caching (1 year, immutable)
 /media/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Web manifest
+# Web manifest - cache forever (1 year, immutable)
 /site.webmanifest
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: application/manifest+json
+
+# Fonts - aggressive caching (1 year, immutable)
+/*.woff2
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff2
+
+# API responses - short cache with revalidation (5 minutes)
+/api/*
+  Cache-Control: public, max-age=300, must-revalidate
