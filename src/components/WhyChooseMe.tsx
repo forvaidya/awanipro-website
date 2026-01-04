@@ -36,10 +36,8 @@ export function WhyChooseMe() {
     <section className="py-20 sm:py-32 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-slate-900 dark:to-indigo-900/20">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent mb-4 leading-relaxed overflow-visible">
-            Why Awanipro Digital<br className="hidden sm:block" /> Technologies?<br className="block sm:hidden" />
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-6">
+          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent mb-4">Why Awanipro Digital Technologies?</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Direct access, immediate responses, and zero bureaucracy. Get enterprise-grade DevOps expertise without the overhead.
           </p>
         </div>
