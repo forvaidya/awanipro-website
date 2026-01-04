@@ -37,7 +37,7 @@ export function WhyChooseMe() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent mb-4">
-            Why Choose a One-Person Consultancy?
+            Why Awanipro Digital Technologies?
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Direct access, immediate responses, and zero bureaucracy. Get enterprise-grade DevOps expertise without the overhead.
