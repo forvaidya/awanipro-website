@@ -34,6 +34,14 @@ export default defineConfig({
         drop_console: true,
       },
     },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor': ['react', 'react-dom'],
+          'markdown': ['react-markdown', 'marked', 'gray-matter'],
+        },
+      },
+    },
   },
   server: {
     port: 5173,

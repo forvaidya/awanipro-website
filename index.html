@@ -108,7 +108,8 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Main app script - deferred to prevent blocking critical resources -->
+    <script type="module" src="/src/main.tsx" defer></script>
 
     <!-- Google Tag Manager (deferred for performance) -->
     <script defer>
