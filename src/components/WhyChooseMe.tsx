@@ -39,7 +39,7 @@ export function WhyChooseMe() {
           <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent mb-4 leading-relaxed overflow-visible">
             Why Awanipro Digital<br className="hidden sm:block" /> Technologies?<br className="block sm:hidden" />
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-6">
             Direct access, immediate responses, and zero bureaucracy. Get enterprise-grade DevOps expertise without the overhead.
           </p>
         </div>
