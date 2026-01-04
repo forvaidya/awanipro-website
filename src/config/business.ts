@@ -5,6 +5,9 @@
  */
 
 export const businessConfig = {
+  // Base URL - hardcoded to production domain
+  baseUrl: 'https://www.awanipro.com',
+
   // Company information
   company: {
     name: 'Awanipro digital technologies private limited',
