@@ -24,12 +24,12 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-900 py-20 sm:py-32">
+    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-900 section-spacing">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-20 animate-pulse" style={{animationDelay: '4s'}}></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 blur-orb-indigo dark:opacity-20"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 blur-orb-cyan dark:opacity-20" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 blur-orb-pink dark:opacity-20" style={{animationDelay: '4s'}}></div>
       </div>
 
       {/* Professional background pattern */}
@@ -60,7 +60,7 @@ export function Hero() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-indigo-800 to-cyan-800 dark:from-white dark:via-cyan-100 dark:to-indigo-100 bg-clip-text text-transparent mb-6 leading-tight">
               Transform Your Infrastructure with
-              <span className="block bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent">
+              <span className="block gradient-text-primary">
                 Expert DevOps
               </span>
             </h1>
@@ -85,10 +85,9 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={scrollToContact}
-                className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 via-cyan-600 to-indigo-700 hover:from-indigo-700 hover:via-cyan-700 hover:to-indigo-800 text-white rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="btn-gradient shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                <span className="relative z-10">Get Free Consultation</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                Get Free Consultation
               </button>
               <a
                 href="#services"

@@ -61,7 +61,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-white dark:bg-gray-900">
+    <section id="contact" className="section-spacing bg-white dark:bg-gray-900">
       <div className="container-max">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
@@ -108,7 +108,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="form-input"
                   placeholder={form.placeholders.name}
                 />
               </div>
@@ -123,7 +123,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="form-input"
                   placeholder={form.placeholders.email}
                 />
               </div>
@@ -138,7 +138,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="form-textarea"
                   placeholder={form.placeholders.message}
                 />
               </div>

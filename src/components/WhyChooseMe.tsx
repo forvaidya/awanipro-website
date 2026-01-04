@@ -33,10 +33,10 @@ export function WhyChooseMe() {
   ];
 
   return (
-    <section className="py-20 sm:py-32 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-slate-900 dark:to-indigo-900/20">
+    <section className="section-spacing bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-slate-900 dark:to-indigo-900/20">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold gradient-text bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 mb-4">Why Awanipro Digital Technologies?</h2>
+          <h2 className="gradient-text-heading">Why Awanipro Digital Technologies?</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Direct access, immediate responses, and zero bureaucracy. Get enterprise-grade DevOps expertise without the overhead.
           </p>
@@ -46,7 +46,7 @@ export function WhyChooseMe() {
           {advantages.map((advantage, idx) => (
             <div
               key={idx}
-              className="relative bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 group"
+              className="card-with-glow p-8 shadow-lg"
             >
               {/* Icon */}
               <div className="mb-6">
@@ -71,7 +71,7 @@ export function WhyChooseMe() {
         </div>
 
         {/* Direct Access Promise */}
-        <div className="bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 rounded-3xl p-8 md:p-12 text-white text-center">
+        <div className="gradient-bg-cta">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">Direct Access Advantage</h3>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Work directly with a 20+ year DevOps expert, no communication delays, no lost context.
