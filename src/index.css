@@ -37,10 +37,85 @@
     @apply bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow;
   }
 
-  .gradient-text {
+  .gradient-text-primary {
     @apply py-1;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    @apply bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600
+           dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400;
+  }
+
+  .gradient-text-heading {
+    @apply text-4xl sm:text-5xl font-bold gradient-text-primary mb-4;
+  }
+
+  .gradient-bg-primary {
+    @apply bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600;
+  }
+
+  .gradient-bg-cta {
+    @apply bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600
+           rounded-3xl p-8 md:p-12 text-white text-center;
+  }
+
+  .card-base {
+    @apply bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl
+           border border-gray-300 dark:border-slate-700
+           transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card-base hover:border-indigo-500 hover:shadow-xl;
+  }
+
+  .card-with-glow {
+    @apply card-hover relative;
+  }
+
+  .hover-glow::before {
+    content: '';
+    @apply absolute -inset-1 bg-gradient-to-r from-indigo-600 to-cyan-600
+           rounded-lg blur opacity-0 group-hover:opacity-20
+           transition duration-300 -z-10;
+  }
+
+  .section-spacing {
+    @apply py-20 sm:py-32;
+  }
+
+  .blur-orb {
+    @apply rounded-full mix-blend-multiply filter blur-3xl
+           opacity-10 dark:opacity-10 animate-pulse;
+  }
+
+  .blur-orb-indigo {
+    @apply blur-orb bg-indigo-500;
+  }
+
+  .blur-orb-cyan {
+    @apply blur-orb bg-cyan-500;
+  }
+
+  .blur-orb-pink {
+    @apply blur-orb bg-pink-500;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 bg-white dark:bg-gray-800
+           border border-gray-300 dark:border-gray-600
+           rounded-lg focus:ring-2 focus:ring-indigo-500
+           focus:border-transparent
+           text-gray-900 dark:text-white;
+  }
+
+  .form-textarea {
+    @apply form-input resize-none;
+  }
+
+  .btn-gradient {
+    @apply px-8 py-4 bg-gradient-to-r from-indigo-500 to-cyan-500
+           text-white rounded-lg hover:shadow-lg
+           transition-all duration-300 font-semibold;
   }
 }

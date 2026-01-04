@@ -67,16 +67,16 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="relative py-20 sm:py-32 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
+    <section id="services" className="relative section-spacing bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
       {/* Background orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 dark:opacity-10 animate-pulse"></div>
-        <div className="absolute -bottom-1/2 -left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 dark:opacity-10 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute -top-1/2 -right-1/4 w-96 h-96 blur-orb-indigo"></div>
+        <div className="absolute -bottom-1/2 -left-1/4 w-96 h-96 blur-orb-cyan" style={{animationDelay: '2s'}}></div>
       </div>
 
       <div className="container-max relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent mb-4">Our Core Competencies</h2>
+          <h2 className="gradient-text-heading">Our Core Competencies</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Enterprise-grade expertise across DevOps, cloud infrastructure, and modern application development
           </p>
@@ -84,15 +84,12 @@ export function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
-            <div 
-              key={idx} 
-              className="group relative p-6 rounded-xl border border-gray-300 dark:border-slate-700 hover:border-indigo-500 transition-all duration-300 overflow-hidden cursor-pointer bg-white dark:bg-slate-800/50"
+            <div
+              key={idx}
+              className="card-hover p-6 rounded-xl overflow-hidden cursor-pointer hover-glow group"
             >
               {/* Gradient background that appears on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              {/* Glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300 -z-10"></div>
 
               {/* Content */}
               <div className="relative z-10">

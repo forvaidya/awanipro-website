@@ -6,17 +6,17 @@ export function About() {
   const { elementRef: profileImageRef, isVisible: isProfileImageVisible } = useLazyLoad<HTMLImageElement>();
 
   return (
-    <section id="about" className="relative py-20 sm:py-32 bg-gray-50 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 overflow-hidden">
+    <section id="about" className="relative section-spacing bg-gray-50 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 right-0 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-10 animate-pulse"></div>
-        <div className="absolute -bottom-1/4 -left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-10 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute -top-1/2 right-0 w-96 h-96 blur-orb-pink"></div>
+        <div className="absolute -bottom-1/4 -left-1/4 w-96 h-96 blur-orb-cyan" style={{animationDelay: '2s'}}></div>
       </div>
 
       <div className="container-max relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-cyan-600 to-pink-600 dark:from-cyan-400 dark:via-indigo-400 dark:to-pink-400 bg-clip-text text-transparent mb-6">About {company.shortName}</h2>
+            <h2 className="gradient-text-heading mb-6">About {company.shortName}</h2>
             <div className="space-y-4 text-gray-600 dark:text-gray-300">
               <p className="text-lg leading-relaxed">
                 {company.description}
@@ -31,8 +31,7 @@ export function About() {
 
             <div className="mt-8 grid grid-cols-2 gap-6">
               {stats.map((stat, idx) => (
-                <div key={idx} className="group relative p-4 rounded-lg border border-gray-300 dark:border-slate-700 hover:border-indigo-500 transition-all duration-300 bg-white dark:bg-slate-800/50">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300 -z-10"></div>
+                <div key={idx} className="card-hover p-4 rounded-lg hover-glow relative z-10 group">
                   <div className={`text-4xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent`}>{stat.value}</div>
                   <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">{stat.label}</p>
                 </div>

@@ -45,7 +45,7 @@ export function Blog() {
   };
 
   return (
-    <section id="blog" className="py-20 sm:py-32 bg-white dark:bg-gray-900">
+    <section id="blog" className="section-spacing bg-white dark:bg-gray-900">
       <div className="container-max">
         {!selectedPost ? (
           <>
@@ -65,10 +65,9 @@ export function Blog() {
                 {blogPosts.map((post) => (
                   <div
                     key={post.id}
-                    className="group relative p-6 rounded-lg border border-gray-300 dark:border-slate-700 hover:border-indigo-500 transition-all duration-300 cursor-pointer bg-white dark:bg-slate-800/50"
+                    className="card-hover p-6 rounded-lg cursor-pointer hover-glow group"
                     onClick={() => handleSelectPost(post)}
                   >
-                    <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-300 -z-10"></div>
                     
                     <div className="relative z-10">
                       <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
@@ -104,7 +103,7 @@ export function Blog() {
               Back to Posts
             </button>
 
-            <article className="bg-white dark:bg-slate-800/50 rounded-lg border border-gray-300 dark:border-slate-700 p-8">
+            <article className="card-base p-8">
               <header className="mb-8 pb-8 border-b border-gray-300 dark:border-slate-700">
                 <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                   {selectedPost.title}
