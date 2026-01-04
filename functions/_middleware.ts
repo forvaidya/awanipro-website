@@ -8,7 +8,7 @@ export const onRequest: PagesFunction = async (context) => {
   const url = new URL(request.url);
 
   // Redirect preview URLs to production domain
-  if (url.hostname.endsWith('.awanipro-website.pages.dev')) {
+  if (url.hostname.endsWith('.awanipro-website.pages.dev') || url.hostname === 'awanipro-website.pages.dev') {
     return Response.redirect(`https://www.awanipro.com${url.pathname}${url.search}`, 301);
   }
 
