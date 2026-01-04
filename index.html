@@ -3,13 +3,6 @@
 <head>
     <meta charset="UTF-8" />
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PVRPSH67');</script>
-    <!-- End Google Tag Manager -->
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="AwaniPro - Expert DevOps & Cloud Solutions. 20+ years of hands-on expertise in AWS, GCP, Kubernetes, and Cloud Consulting." />
@@ -23,7 +16,10 @@
     <title>AwaniPro - Expert DevOps & Cloud Consulting | Bangalore</title>
     <!-- Canonical URL is set dynamically by React based on accessed domain -->
     <link rel="canonical" href="https://beta.awanipro.com/" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font optimization: preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Structured Data for SEO -->
@@ -106,5 +102,15 @@
 
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Google Tag Manager (deferred for performance) -->
+    <script defer>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PVRPSH67');
+    </script>
+    <!-- End Google Tag Manager -->
 </body>
 </html>
