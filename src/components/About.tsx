@@ -31,7 +31,7 @@ export function About() {
 
             <div className="mt-8 grid grid-cols-2 gap-6">
               {stats.map((stat, idx) => (
-                <div key={idx} className="card-hover p-4 rounded-lg hover-glow relative z-10">
+                <div key={idx} className="card-hover p-4 rounded-lg hover-glow relative z-10 group">
                   <div className={`text-4xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent`}>{stat.value}</div>
                   <p className="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">{stat.label}</p>
                 </div>

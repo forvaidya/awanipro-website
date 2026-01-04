@@ -70,7 +70,7 @@
   }
 
   .card-with-glow {
-    @apply card-hover relative group;
+    @apply card-hover relative;
   }
 
   .hover-glow::before {

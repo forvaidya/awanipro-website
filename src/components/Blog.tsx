@@ -65,7 +65,7 @@ export function Blog() {
                 {blogPosts.map((post) => (
                   <div
                     key={post.id}
-                    className="card-hover p-6 rounded-lg cursor-pointer hover-glow"
+                    className="card-hover p-6 rounded-lg cursor-pointer hover-glow group"
                     onClick={() => handleSelectPost(post)}
                   >
                     

@@ -46,7 +46,7 @@ export function WhyChooseMe() {
           {advantages.map((advantage, idx) => (
             <div
               key={idx}
-              className="card-with-glow p-8 shadow-lg"
+              className="card-with-glow p-8 shadow-lg group"
             >
               {/* Icon */}
               <div className="mb-6">

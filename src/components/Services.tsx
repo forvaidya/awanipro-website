@@ -86,7 +86,7 @@ export function Services() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="card-hover p-6 rounded-xl overflow-hidden cursor-pointer hover-glow"
+              className="card-hover p-6 rounded-xl overflow-hidden cursor-pointer hover-glow group"
             >
               {/* Gradient background that appears on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
