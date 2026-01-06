@@ -39,4 +39,5 @@ build/
 
 # Generated files
 src/build-info.generated.ts
-.wrangler
+.wranglercf_api.sh
+cf_validate.sh
