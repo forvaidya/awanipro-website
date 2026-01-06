@@ -25,7 +25,7 @@ Since your domain (`awanipro.com`) **already uses Cloudflare nameservers**, you 
 1. **Cloudflare Dashboard** → **Pages** → **awanipro-website**
 2. Go to **Settings** → **Domains**
 3. Click **Add custom domain**
-4. Enter: `beta.awanipro.com`
+4. Enter: `www.awanipro.com`
 5. Cloudflare will show DNS configuration options
 6. Choose: **Use Cloudflare Nameservers** (already set!)
 7. Click **Activate domain**
@@ -37,7 +37,7 @@ Since your domain (`awanipro.com`) **already uses Cloudflare nameservers**, you 
 
 ### Step 4: Test
 Once done:
-- Visit: `https://beta.awanipro.com`
+- Visit: `https://www.awanipro.com`
 - Your site should be live! ✨
 
 ## 🎯 Key Point

@@ -63,7 +63,7 @@ npm run preview
 ## 🌐 Deployment to Cloudflare Pages
 
 ### Current Deployment Target
-- **Domain**: `beta.awanipro.com` (Cloudflare)
+- **Domain**: `www.awanipro.com` (Cloudflare)
 - **Status**: Production-ready
 - **SSL**: Auto-provisioned by Cloudflare
 - **CDN**: Global Cloudflare CDN
@@ -100,11 +100,11 @@ In Cloudflare Pages → Project Settings → Build configuration:
 | **Root directory** | `/` (default) |
 | **Node version** | 18 (set in `package.json`) |
 
-### Step 4: Deploy to Custom Domain (beta.awanipro.com)
+### Step 4: Deploy to Custom Domain (www.awanipro.com)
 
 1. In Cloudflare Pages project → **Settings** → **Domains**
 2. Click **Add custom domain**
-3. Enter domain: `beta.awanipro.com`
+3. Enter domain: `www.awanipro.com`
 4. Choose: **Use Cloudflare nameservers** (recommended) OR **Add CNAME record**
 
 **Option A: Cloudflare Nameservers (Easiest)**
@@ -115,7 +115,7 @@ In Cloudflare Pages → Project Settings → Build configuration:
 
 **Option B: CNAME Record**
 - In your domain registrar's DNS settings
-- Add CNAME record: `beta.awanipro.com` → `awanipro-website.<pages-hash>.pages.dev`
+- Add CNAME record: `www.awanipro.com` → `awanipro-website.<pages-hash>.pages.dev`
 - Hash provided by Cloudflare Pages
 
 5. **Verify** once DNS propagates
@@ -128,7 +128,7 @@ Add to Cloudflare Pages → **Settings** → **Environment variables**:
 ```
 # Production (auto-deployed)
 VITE_API_URL=https://api.awanipro.com
-VITE_DOMAIN=beta.awanipro.com
+VITE_DOMAIN=www.awanipro.com
 NODE_ENV=production
 ```
 
@@ -136,8 +136,8 @@ NODE_ENV=production
 
 After DNS propagates (5-30 mins):
 
-1. Visit `https://beta.awanipro.com` ✓
-2. Check Cloudflare Analytics: Dashboard → `beta.awanipro.com` → **Analytics**
+1. Visit `https://www.awanipro.com` ✓
+2. Check Cloudflare Analytics: Dashboard → `www.awanipro.com` → **Analytics**
 3. Verify SSL: 🔒 Green lock icon in browser
 4. Test all pages: Home, About, Services, Blog, Contact
 
@@ -149,7 +149,7 @@ After DNS propagates (5-30 mins):
 git add .
 git commit -m "Update blog posts"
 git push origin main
-# → Cloudflare Pages auto-builds and deploys to beta.awanipro.com
+# → Cloudflare Pages auto-builds and deploys to www.awanipro.com
 ```
 
 Monitor deployments:
@@ -161,7 +161,7 @@ Monitor deployments:
 
 For different environments, create Cloudflare environment variables:
 
-**Production** (`beta.awanipro.com`):
+**Production** (`www.awanipro.com`):
 ```env
 VITE_ENVIRONMENT=production
 VITE_API_URL=https://api.awanipro.com

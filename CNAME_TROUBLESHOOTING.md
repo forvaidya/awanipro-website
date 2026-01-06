@@ -8,7 +8,7 @@ Here's how to fix it step by step:
 
 1. **Cloudflare Dashboard** → **Pages** → **awanipro-website**
 2. Go to **Settings** → **Domains**
-3. Check the status of `beta.awanipro.com`
+3. Check the status of `www.awanipro.com`
 4. Should show: ✅ **Active** or similar status
 
 **If showing error:**
@@ -36,7 +36,7 @@ DNS changes can take:
 
 **Check if DNS is propagated:**
 ```bash
-nslookup beta.awanipro.com
+nslookup www.awanipro.com
 ```
 
 Should show the CNAME pointing to Cloudflare Pages.
@@ -75,4 +75,4 @@ This is **easier and more reliable** than CNAME if you control the registrar!
 
 ---
 
-**Once DNS propagates:** Visit `https://beta.awanipro.com` and your site will be live! 🚀
+**Once DNS propagates:** Visit `https://www.awanipro.com` and your site will be live! 🚀

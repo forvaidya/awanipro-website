@@ -16,7 +16,7 @@ Great! You removed the CNAME. Now let's add the domain through Cloudflare Pages!
 
 ### Step 3: Add Custom Domain
 1. Click **Add custom domain** button
-2. Type: `beta.awanipro.com`
+2. Type: `www.awanipro.com`
 3. Click **Continue**
 
 ### Step 4: Choose DNS Setup
@@ -34,7 +34,7 @@ Cloudflare will show you options:
 ### Step 6: Verify It Works
 Once activated:
 1. Open your browser
-2. Go to: `https://beta.awanipro.com`
+2. Go to: `https://www.awanipro.com`
 3. Should show your AwaniPro website! ✨
 
 ## ✅ Check Status

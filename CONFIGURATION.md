@@ -62,7 +62,7 @@ Centralized configuration object used throughout the application.
 
 ### Examples
 
-#### Current Setup (beta.awanipro.com)
+#### Current Setup (www.awanipro.com)
 ```bash
 VITE_BASE_URL=
 ```
