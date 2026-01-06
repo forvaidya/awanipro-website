@@ -31,13 +31,13 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <button onClick={() => scrollToSection('about')} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+          <button onClick={() => scrollToSection('about')} className="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-amber-400 transition">
             About
           </button>
-          <button onClick={() => scrollToSection('services')} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+          <button onClick={() => scrollToSection('services')} className="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-amber-400 transition">
             Services
           </button>
-          <button onClick={() => scrollToSection('blog')} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+          <button onClick={() => scrollToSection('blog')} className="text-gray-600 dark:text-gray-300 hover:text-orange-600 dark:hover:text-amber-400 transition">
             Blog
           </button>
           <button onClick={() => scrollToSection('contact')} className="btn-primary">
@@ -72,13 +72,13 @@ export function Header({ darkMode, toggleDarkMode }: HeaderProps) {
       {mobileMenuOpen && (
         <div className="md:hidden bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
           <div className="container-max py-4 flex flex-col gap-4">
-            <button onClick={() => scrollToSection('about')} className="text-left text-gray-600 dark:text-gray-300 hover:text-blue-600 py-2">
+            <button onClick={() => scrollToSection('about')} className="text-left text-gray-600 dark:text-gray-300 hover:text-orange-600 py-2">
               About
             </button>
-            <button onClick={() => scrollToSection('services')} className="text-left text-gray-600 dark:text-gray-300 hover:text-blue-600 py-2">
+            <button onClick={() => scrollToSection('services')} className="text-left text-gray-600 dark:text-gray-300 hover:text-orange-600 py-2">
               Services
             </button>
-            <button onClick={() => scrollToSection('blog')} className="text-left text-gray-600 dark:text-gray-300 hover:text-blue-600 py-2">
+            <button onClick={() => scrollToSection('blog')} className="text-left text-gray-600 dark:text-gray-300 hover:text-orange-600 py-2">
               Blog
             </button>
             <button onClick={() => scrollToSection('contact')} className="btn-primary w-full text-center">

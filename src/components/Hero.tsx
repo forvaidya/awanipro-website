@@ -1,35 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export function Hero() {
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Technology infrastructure images for cycling
-  const techImages = [
-    '/media/tech-infrastructure-1.svg',
-    '/media/tech-infrastructure-2.svg',
-    '/media/tech-infrastructure-3.svg'
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    // Cycle through images every 3 minutes (180 seconds)
-    const interval = setInterval(() => {
-      setCurrentImageIndex(prevIndex => (prevIndex + 1) % techImages.length);
-    }, 180000); // 3 minutes = 180000ms
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-900 section-spacing">
-      {/* Animated background elements */}
+    <section id="home" className="relative overflow-hidden bg-white dark:bg-slate-950 section-spacing">
+      {/* Subtle animated background elements - minimal Anthropic style */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 blur-orb-indigo dark:opacity-20"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 blur-orb-cyan dark:opacity-20" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 blur-orb-pink dark:opacity-20" style={{animationDelay: '4s'}}></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 blur-orb-orange dark:opacity-10" style={{background: 'radial-gradient(circle, rgba(234, 88, 12, 0.1) 0%, transparent 70%)'}}></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 blur-orb-orange dark:opacity-10" style={{animationDelay: '2s', background: 'radial-gradient(circle, rgba(234, 88, 12, 0.05) 0%, transparent 70%)'}}></div>
       </div>
 
       {/* Professional background pattern */}
@@ -40,52 +21,33 @@ export function Hero() {
       </div>
 
       <div className="container-max relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-2xl">
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-3 mb-6">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 text-sm font-medium">
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Enterprise Ready
-              </div>
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-sm font-medium">
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                SOC 2 Compliant
-              </div>
-            </div>
+        <div className="max-w-4xl mx-auto text-center">
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-indigo-800 to-cyan-800 dark:from-white dark:via-cyan-100 dark:to-indigo-100 bg-clip-text text-transparent mb-6 leading-tight">
-              Transform Your Infrastructure with
-              <span className="block gradient-text-primary">
-                Expert DevOps
-              </span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+              Transform Your Infrastructure with Expert DevOps
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto">
               <strong className="text-gray-900 dark:text-white">Reduce deployment time by 80%</strong> and achieve enterprise-grade reliability.
               20+ years of hands-on expertise in cloud infrastructure, Kubernetes, CI/CD, and AWS/GCP administration.
             </p>
 
             {/* Key metrics */}
-            <div className="grid grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-2 gap-6 mb-8 max-w-md mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-pink-600 bg-clip-text text-transparent">20+</div>
+                <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">20+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">99.9%</div>
+                <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">99.9%</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Uptime SLA</div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={scrollToContact}
-                className="btn-gradient shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="px-8 py-4 bg-orange-600 dark:bg-orange-500 text-white rounded-lg font-semibold text-lg hover:bg-orange-700 dark:hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Free Consultation
               </button>
@@ -98,49 +60,15 @@ export function Hero() {
             </div>
 
             {/* Social proof */}
-            <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 max-w-md mx-auto">
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Trusted by leading companies</p>
-              <div className="flex items-center gap-6 opacity-60">
+              <div className="flex items-center gap-6 opacity-60 justify-center flex-wrap">
                 <div className="text-gray-400 dark:text-gray-500 font-semibold text-sm">AWS</div>
                 <div className="text-gray-400 dark:text-gray-500 font-semibold text-sm">GCP</div>
                 <div className="text-gray-400 dark:text-gray-500 font-semibold text-sm">Kubernetes</div>
                 <div className="text-gray-400 dark:text-gray-500 font-semibold text-sm">Docker</div>
               </div>
             </div>
-          </div>
-
-          {/* Hero visual - Smooth cycling technology infrastructure */}
-          <div className="relative lg:block hidden">
-            <div className="relative">
-              <div className="w-full h-96 relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-800 dark:via-blue-900/10 dark:to-indigo-900/10">
-                {techImages.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Technology Infrastructure ${index + 1}`}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))' }}
-                  />
-                ))}
-              </div>
-              
-              {/* Image indicators */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {techImages.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                      index === currentImageIndex 
-                        ? 'bg-indigo-600 dark:bg-cyan-400' 
-                        : 'bg-gray-300 dark:bg-gray-600'
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

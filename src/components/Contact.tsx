@@ -76,7 +76,7 @@ export function Contact() {
             <div className="space-y-8">
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2">Email</h3>
-                <a href={`mailto:${company.email}`} className="text-blue-600 dark:text-blue-400 hover:underline">
+                <a href={`mailto:${company.email}`} className="text-orange-600 dark:text-amber-400 hover:underline">
                   {company.email}
                 </a>
               </div>

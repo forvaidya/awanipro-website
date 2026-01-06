@@ -70,13 +70,13 @@ export function Services() {
     <section id="services" className="relative section-spacing bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
       {/* Background orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -right-1/4 w-96 h-96 blur-orb-indigo"></div>
-        <div className="absolute -bottom-1/2 -left-1/4 w-96 h-96 blur-orb-cyan" style={{animationDelay: '2s'}}></div>
+        <div className="absolute -top-1/2 -right-1/4 w-96 h-96 blur-orb-orange"></div>
+        <div className="absolute -bottom-1/2 -left-1/4 w-96 h-96 blur-orb-amber" style={{animationDelay: '2s'}}></div>
       </div>
 
       <div className="container-max relative z-10">
         <div className="text-center mb-16">
-          <h2 className="gradient-text-heading">Our Core Competencies</h2>
+          <h2 className="gradient-text-heading-orange">Our Core Competencies</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Enterprise-grade expertise across DevOps, cloud infrastructure, and modern application development
           </p>
@@ -89,14 +89,14 @@ export function Services() {
               className="card-hover p-6 rounded-xl overflow-hidden cursor-pointer hover-glow group"
             >
               {/* Gradient background that appears on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Content */}
               <div className="relative z-10">
-                <div className="w-12 h-12 mb-4 text-indigo-600 dark:text-cyan-400 transform group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                <div className="w-12 h-12 mb-4 text-orange-600 dark:text-amber-400 transform group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-600 dark:group-hover:from-cyan-400 group-hover:to-pink-600 dark:group-hover:to-indigo-400 group-hover:bg-clip-text transition-all">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-orange-600 dark:group-hover:from-amber-400 group-hover:to-orange-600 dark:group-hover:to-amber-400 group-hover:bg-clip-text transition-all">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">

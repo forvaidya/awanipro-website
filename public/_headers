@@ -12,6 +12,7 @@
 /content/*
   Cache-Control: public, max-age=3600, must-revalidate
   X-Content-Type-Options: nosniff
+  X-Robots-Tag: index, follow
 
 # Static files - extended cache (7 days)
 /*.pdf

@@ -33,10 +33,10 @@ export function WhyChooseMe() {
   ];
 
   return (
-    <section className="section-spacing bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-slate-900 dark:to-indigo-900/20">
+    <section className="section-spacing bg-gradient-to-br from-orange-50 via-white to-amber-50 dark:from-slate-900 dark:to-orange-900/20">
       <div className="container-max">
         <div className="text-center mb-16">
-          <h2 className="gradient-text-heading">Why Awanipro Digital Technologies?</h2>
+          <h2 className="gradient-text-heading-orange">Why Awanipro Digital Technologies?</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Direct access, immediate responses, and zero bureaucracy. Get enterprise-grade DevOps expertise without the overhead.
           </p>
@@ -50,7 +50,7 @@ export function WhyChooseMe() {
             >
               {/* Icon */}
               <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                   {advantage.icon}
                 </div>
               </div>
@@ -60,7 +60,7 @@ export function WhyChooseMe() {
               <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{advantage.description}</p>
               
               {/* Highlight badge */}
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-100 to-cyan-100 dark:from-indigo-900/30 dark:to-cyan-900/30 text-indigo-700 dark:text-indigo-300 text-sm font-medium">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 dark:from-orange-900/30 dark:to-amber-900/30 text-orange-700 dark:text-orange-300 text-sm font-medium">
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>

@@ -73,13 +73,13 @@ export function Blog() {
                       <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
                         {formatDate(post.date)} • {post.author}
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-cyan-400 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-amber-400 transition-colors">
                         {post.title}
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                         {post.description}
                       </p>
-                      <button className="inline-flex items-center text-indigo-600 dark:text-cyan-400 hover:text-indigo-700 dark:hover:text-cyan-300 font-semibold transition-colors">
+                      <button className="inline-flex items-center text-orange-600 dark:text-amber-400 hover:text-orange-700 dark:hover:text-amber-300 font-semibold transition-colors">
                         Read More
                         <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -95,7 +95,7 @@ export function Blog() {
           <div className="max-w-3xl mx-auto">
             <button
               onClick={() => setSelectedPost(null)}
-              className="inline-flex items-center text-indigo-600 dark:text-cyan-400 hover:text-indigo-700 dark:hover:text-cyan-300 font-semibold transition-colors mb-8"
+              className="inline-flex items-center text-orange-600 dark:text-amber-400 hover:text-orange-700 dark:hover:text-amber-300 font-semibold transition-colors mb-8"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
