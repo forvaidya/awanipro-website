@@ -1,6 +1,22 @@
 User-agent: *
 Allow: /
 
+# Allow AI chatbot crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: XBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 # Sitemaps
 Sitemap: https://www.awanipro.com/sitemap.xml
 Sitemap: https://awanipro.com/sitemap.xml
