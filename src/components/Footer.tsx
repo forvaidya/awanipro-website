@@ -52,7 +52,7 @@ export function Footer() {
             </p>
             <div className="text-gray-400 text-sm space-y-1">
               <p>
-                <a href="/resume/MAHESH VAIDYA.pdf" download className="text-orange-400 hover:text-orange-300 transition">
+                <a href="/resume/MAHESH VAIDYA.pdf" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition">
                   Resume (PDF)
                 </a>
               </p>
