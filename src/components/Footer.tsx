@@ -47,9 +47,21 @@ export function Footer() {
                 {company.email}
               </a>
             </p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm mb-3">
               {company.location}
             </p>
+            <div className="text-gray-400 text-sm space-y-1">
+              <p>
+                <a href="/resume/MAHESH VAIDYA.pdf" download className="text-orange-400 hover:text-orange-300 transition">
+                  Resume (PDF)
+                </a>
+              </p>
+              <p>
+                <a href="/resume/MAHESH VAIDYA.docx" download className="text-orange-400 hover:text-orange-300 transition">
+                  Resume (Word)
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Legal */}
